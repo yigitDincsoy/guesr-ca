@@ -3,28 +3,48 @@ import styled from "styled-components";
 
 
 //STYLED COMPONENTS
-const Title = styled.h1`
+const InfoboxTitle = styled.h1`
   font-size: 1.5em;
   text-align: center;
-  color: palevioletred;
+  color: black;
+`;
+
+const InfoboxImage = styled.img`
+    width: 100%;
+`;
+
+
+const InfoboxButtonArea = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+`;
+
+const InfoboxButton = styled.button`
+    width: 51%;
+    margin-bottom: 10px;
 `;
 
 const Wrapper = styled.section`
-  padding: 4em;
   background: papayawhip;
   border: 2px solid black;
-  width: 30%;
+  width:50%;
   margin: auto;
   margin-bottom: 5%;
-  height: 20rem;
+  min-height: 20rem;
 `;
 
 function Infobox(props) {
     const boxData = props.data;
   return (
     <Wrapper>
-        {boxData["title"]}
-      <Title>Hello World, this is my first styled component!</Title>
+        <InfoboxImage  src={"stockphotos/"+boxData["photo"]} />
+        <InfoboxTitle>{boxData["title"]}</InfoboxTitle>
+        <InfoboxButtonArea>
+        <InfoboxButton>Option 1</InfoboxButton>
+        <InfoboxButton>Option 2</InfoboxButton>
+        </InfoboxButtonArea>
     </Wrapper>
   );
 }
