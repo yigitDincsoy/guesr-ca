@@ -3,6 +3,7 @@ import Infobox from './Infobox'
 
 const questionData = {
     0: {
+    id:0,
     category: "Rumour",
     title: "Will Elon Musk tweet about Dogecoin this week?",
     photo: "elon.png",
@@ -11,6 +12,7 @@ const questionData = {
     closeDate: new Date("2023-01-15"),
   },
   1: {
+    id:1,
     category: "Politics",
     title: "Who will win Oscars tonight?",
     photo: "oscar.png",
@@ -19,6 +21,7 @@ const questionData = {
     closeDate: new Date("2023-01-15"),
   },
   2: {
+    id:2,
     category: "Gaming",
     photo: "gamer.png",
     title: "Will Counter Strike 2 announced this month?",
@@ -28,6 +31,9 @@ const questionData = {
   },
 }
 ;
+
+
+
 
 
 function Main()
