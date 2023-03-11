@@ -4,10 +4,29 @@
   justify-content: center;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
+  background-color: #8E858B;
+}
+
+.mainArea {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  
 }
 
 header {
+  font-size: 3rem;
+  padding: 1rem;
   width: 100%;
   text-align: center;
   background-color: #F3EEDF;
+}
+
+header h1{
+  font-size: 3rem;
+  margin: 0px;
+}
+
+header p {
+  font-size: 1rem;
+  margin: 0px;
 }
