@@ -34,8 +34,27 @@ header p {
 }
 
 
-.navbar {
-  background-color: red;
-  text-align: center;
-
+.navbar
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    font-family: 'Kanit', sans-serif;
 }
+
+.navlink
+{
+    margin-left:8px;
+    margin-right:8px;
+}
+
+
+a{
+  color: whitesmoke;
+  background-color: transparent;
+  text-decoration: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+

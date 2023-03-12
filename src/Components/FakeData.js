@@ -11,7 +11,7 @@ const questionData = {
   1: {
     id:1,
     category: "Politics",
-    title: "Who will win Oscars tonight?",
+    title: "Will Jeb Bush win an Oscar tonight?",
     photo: "oscar.png",
     options: ["Dean Tsaltas", "Naruto Uzumaki", "Tim Horton", "Someone Else"],
     openDate: new Date("2022-01-15"),
@@ -79,7 +79,7 @@ const questionData = {
     options: ["Yes", "No"],
     openDate: new Date("2022-01-15"),
     closeDate: new Date("2023-01-15"),
-  },
+  }
 }
 ;
 
