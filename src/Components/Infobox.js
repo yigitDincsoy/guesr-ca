@@ -34,7 +34,7 @@ const InfoboxButton = styled.button`
 const InfoboxWrapper = styled.section`
   background-color: ${props => props.bgColor ? props.bgColor : "white"};
   border: 2px solid black;
-  width: 50%;
+  width: 30%;
   margin: auto;
   margin-bottom: 5%;
   min-height: 20rem;
@@ -58,11 +58,13 @@ function Infobox(props) {
     <InfoboxWrapper bgColor={pastelColours[boxData["id"]]}>
       <InfoboxImage src={"stockphotos/" + boxData["photo"]} />
       <div className="imageText">{boxData["category"]}</div>
+      <p>5 Days 3 Hours</p>
       <InfoboxTitle>{boxData["title"]}</InfoboxTitle>
       <InfoboxButtonArea>
-          <InfoboxButton>Option 1</InfoboxButton>
-          <InfoboxButton>Option 2</InfoboxButton>
+          <InfoboxButton>Yes</InfoboxButton>
+          <InfoboxButton>No</InfoboxButton>
       </InfoboxButtonArea>
+      <p>300 Yes 500 No</p>
     </InfoboxWrapper>
   );
 }

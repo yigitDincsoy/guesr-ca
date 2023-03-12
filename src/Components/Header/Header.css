@@ -1,0 +1,22 @@
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header_left header_mid header_right";
+}
+
+.header_left {
+    grid-area: header_left;
+}
+
+.header_mid {
+    grid-area: header_mid;
+    text-align: center;
+}
+
+.header_right {
+    grid-area: header_right;
+}
