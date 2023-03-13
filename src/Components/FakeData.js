@@ -1,86 +1,77 @@
-const questionData = {
-    0: {
+const questionData = [
+    {
     id:0,
-    category: "Rumour",
-    title: "Will Elon Musk tweet about Dogecoin this week?",
+    category: "Gossip",
+    title: "Elon Musk tweets about Dogecoin.",
     photo: "elon.png",
-    options: ["Yes", "No"],
     openDate: new Date("2022-01-15"),
     closeDate: new Date("2023-01-15"),
   },
-  1: {
+  {
     id:1,
     category: "Politics",
-    title: "Will Jeb Bush win an Oscar tonight?",
-    photo: "oscar.png",
-    options: ["Dean Tsaltas", "Naruto Uzumaki", "Tim Horton", "Someone Else"],
+    title: "Jeb Bush wins the US presidential election.",
+    photo: "jebbush.png",
     openDate: new Date("2022-01-15"),
     closeDate: new Date("2023-01-15"),
   },
-  2: {
+   {
     id:2,
-    category: "Gaming",
+    category: "Tech",
     photo: "gamer.png",
-    title: "Will Counter Strike 2 announced this month?",
-    options: ["Yes", "No"],
+    title: "Counter Strike 2 gets announced.",
     openDate: new Date("2022-01-15"),
     closeDate: new Date("2023-01-15"),
   },
-  3: {
+ {
     id:3,
-    category: "Other",
-    photo: "gamer.png",
-    title: "Will Counter Strike 2 announced this month?",
-    options: ["Yes", "No"],
+    category: "Gossip",
+    photo: "adele.png",
+    title: "Adele gets married to her boyfriend.",
     openDate: new Date("2022-01-15"),
     closeDate: new Date("2023-01-15"),
   },
-  4: {
+  {
     id:4,
-    category: "Gaming",
-    photo: "gamer.png",
-    title: "Will Counter Strike 2 announced this month?",
-    options: ["Yes", "No"],
+    category: "Economy",
+    photo: "economy.png",
+    title: "USD/CAD exchange ratio reaches 1.45.",
     openDate: new Date("2022-01-15"),
     closeDate: new Date("2023-01-15"),
   },
-  5: {
+   {
     id:5,
-    category: "Other",
-    photo: "gamer.png",
-    title: "Will Counter Strike 2 announced this month?",
-    options: ["Yes", "No"],
+    category: "Sports",
+    photo: "hockey.png",
+    title: "Halifax Mooseheads scores at least 10 points this night.",
     openDate: new Date("2022-01-15"),
     closeDate: new Date("2023-01-15"),
   },
-  6: {
+   {
     id:6,
-    category: "Politics",
-    photo: "gamer.png",
-    title: "Will Counter Strike 2 announced this month?",
-    options: ["Yes", "No"],
+    category: "News",
+    photo: "hamburg.png",
+    title: "BurgerChain releases a new hamburger.",
     openDate: new Date("2022-01-15"),
     closeDate: new Date("2023-01-15"),
   },
-  7: {
+  {
     id:7,
-    category: "Rumour",
-    photo: "gamer.png",
-    title: "Will Counter Strike 2 announced this month?",
-    options: ["Yes", "No"],
+    category: "News",
+    photo: "war.png",
+    title: "World War 3 Begins.",
     openDate: new Date("2022-01-15"),
     closeDate: new Date("2023-01-15"),
   },
-  8: {
+ {
     id:8,
-    category: "Rumour",
-    photo: "gamer.png",
-    title: "Will Counter Strike 2 announced this month?",
-    options: ["Yes", "No"],
+    category: "Economy",
+    photo: "economy.png",
+    title: "Interest rates will get increased.",
     openDate: new Date("2022-01-15"),
     closeDate: new Date("2023-01-15"),
   }
-}
+]
 ;
 
 export default questionData;

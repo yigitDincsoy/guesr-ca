@@ -33,15 +33,19 @@ const InfoboxButton = styled.button`
 
 const InfoboxWrapper = styled.section`
   background-color: ${props => props.bgColor ? props.bgColor : "white"};
-  border: 2px solid black;
+  border: 3px solid white;
   width: 30%;
   margin: auto;
   margin-bottom: 5%;
-  min-height: 20rem;
+  margin-left: 1%;
+  margin-right: 1%;
+  min-height: 32rem;
+  max-height: 32rem;
 
   & .imageText {
+    font-size: 1.5rem;
     position: relative;
-    top: -25px;
+    top: -30px;
     right: -3px;
     color: white; 
     height: 0px;

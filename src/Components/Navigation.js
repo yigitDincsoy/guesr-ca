@@ -12,7 +12,6 @@ function Navigation()
             <Link className="navlink" to="/gossip">Gossip</Link>
             <Link className="navlink" to="/tech">Technology</Link>
             <Link className="navlink" to="/all">All</Link>
-            <Link className="navlink" to="/submit">Submit Your Question</Link>
             <Link className="navlink" to="/market">Market</Link>
         </div>
     )
