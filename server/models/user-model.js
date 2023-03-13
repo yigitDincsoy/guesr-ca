@@ -1,40 +1,26 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-class Avatar {
-    constructor(head, chest, lHand, rHand, legs) {
-      this.head = head;
-      this.chest = chest;
-      this.lHand = lHand;
-      this.rHand = rHand;
-      this.legs = legs;
-    }
-  }
-
-  
-class Answer {
-    constructor(questionID, choice, betAmount) {
-      this.questionID = questionID;
-      this.choice = choice;
-      this.betAmount = betAmount;
-    }
-  }
-
 const User = new Schema(
     {
-        username: { type: String, required: true },
+        username: { type: String, required: true},
         yeets: {type: Number, required: true},
         items: {type: [mongoose.SchemaTypes.ObjectId]},
-        titles: {type: [String], required: true },
-        avatar: {type: Avatar},
-        answers: {type: [Answer]},
-    },
-    { timestamps: true },
+        titles: {type: [String]},
+        avatar: {
+            head:{type: mongoose.SchemaTypes.ObjectId},
+            chest:{type: mongoose.SchemaTypes.ObjectId},
+            lHand:{type: mongoose.SchemaTypes.ObjectId},
+            rHand:{type: mongoose.SchemaTypes.ObjectId},
+            legs:{type: mongoose.SchemaTypes.ObjectId},
+        },
+        answers: {type: [{
+            questionID:{type: mongoose.SchemaTypes.ObjectId},
+            choice:{type: Number},
+            betAmount:{type: Number}
+        }]}
+    }
 )
-
-User.methods.createAvatar = function() {
-    this.avatar = new Avatar(null,null,null,null,null)
-}
 
 User.methods.updateAvatar = function(head=null, chest=null, lHand=null, rHand=null, legs=null) {
     if(head!=null)this.avatar.head = head;
@@ -44,10 +30,9 @@ User.methods.updateAvatar = function(head=null, chest=null, lHand=null, rHand=nu
     if(legs!=null)this.avatar.legs = legs;
 }
 
-User.methods.addAnswer = function(questionID, choice, betAmount)
+User.methods.addAnswer = function(QuestionID, Choice, BetAmount)
 {
-    let answ = new Answer(questionID, choice, betAmount)
-    this.answers.push(answ)
+    this.answers.push({ questionID:QuestionID, choice:Choice, betAmount:BetAmount})
 }
 
 module.exports = mongoose.model('users', User)
