@@ -4,14 +4,18 @@ import Header from './Components/Header/Header'
 import Main from './Components/Main'
 import Navigation from './Components/Navigation';
 import Footer from './Components/Footer';
+import React, { useState } from 'react';
 
-
+export const ThemeContext = React.createContext();
 
 function App() {
+  const [globalVar, set_globalVar] = useState("YES!");
 
   return (
     <div className="App">
+    
     <BrowserRouter>
+    <ThemeContext.Provider value={globalVar}>
       <Header/>
       <Navigation/>
     <Routes>
@@ -25,6 +29,7 @@ function App() {
       <Route path="/all" element={<Main/>}/>
       <Route path="/market" element={<Main/>}/>
     </Routes>
+    </ThemeContext.Provider>
     </BrowserRouter>
    <Footer/>
     </div>

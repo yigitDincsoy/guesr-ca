@@ -1,21 +1,38 @@
+import React, { useContext } from 'react';
+import { ThemeContext } from "../App";
+
 import Infobox from './Infobox'
-import questionData from './FakeData';
+import qData from './FakeData';
+
 
 
 function Main()  {
+    const darkTheme = useContext(ThemeContext);
+    
+    //Filter the data according to the user selection and create a new, smaller question array to be used for rendering
+    let userSelection = "All";
+    let filtered_qData = [];
+
+    for (let i = 0; i < qData.length; i++) {
+
+        if ((qData[i]["category"] == userSelection) || (userSelection == "All")) {
+            filtered_qData.push(qData[i]);
+        }
+        
+    }
+
+
+
+    //Create another array, that determines how many Infoboxes should be rendered on the screen
+    let toRender_boxes = [];
+    for (let i = 0; i < filtered_qData.length; i++) {
+        toRender_boxes.push(<Infobox className="Infobox" data={filtered_qData[i]}/>)
+    }
+
     return(
- 
             <div className="mainArea">
-            <Infobox className="Infobox" data={questionData[0]}/>
-            <Infobox className="Infobox" data={questionData[1]}/>
-            <Infobox className="Infobox" data={questionData[2]}/>
-            <Infobox className="Infobox" data={questionData[3]}/>
-            <Infobox className="Infobox" data={questionData[4]}/>
-            <Infobox className="Infobox" data={questionData[5]}/>
-            <Infobox className="Infobox" data={questionData[6]}/>
-            <Infobox className="Infobox" data={questionData[7]}/>
-            <Infobox className="Infobox" data={questionData[8]}/>
-          
+             {toRender_boxes}
+             {darkTheme}
             </div>
     )
 }
