@@ -10,7 +10,6 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 3%;
-  margin-bottom: 3%;
 
 
 }
@@ -42,3 +41,10 @@ a{
   padding-bottom: 5px;
 }
 
+
+footer {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: darkmagenta;
+  text-align: center;
+  color: white;
+}

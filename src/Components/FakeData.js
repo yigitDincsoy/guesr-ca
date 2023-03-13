@@ -59,7 +59,7 @@ const questionData = [
     id:7,
     category: "News",
     photo: "war.png",
-    title: "World War 3 Begins.",
+    title: "World War 3 begins.",
     openDate: new Date("2022-01-15"),
     closeDate: new Date("2023-01-15"),
   },

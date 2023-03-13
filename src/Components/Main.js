@@ -1,12 +1,11 @@
 import Infobox from './Infobox'
 import questionData from './FakeData';
 
-function Main()
-{
+
+function Main()  {
     return(
  
             <div className="mainArea">
-         
             <Infobox className="Infobox" data={questionData[0]}/>
             <Infobox className="Infobox" data={questionData[1]}/>
             <Infobox className="Infobox" data={questionData[2]}/>
@@ -16,7 +15,6 @@ function Main()
             <Infobox className="Infobox" data={questionData[6]}/>
             <Infobox className="Infobox" data={questionData[7]}/>
             <Infobox className="Infobox" data={questionData[8]}/>
-          
           
             </div>
     )

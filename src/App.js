@@ -3,10 +3,12 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Main from './components/Main'
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 
 
 function App() {
+
   return (
     <div className="App">
     <BrowserRouter>
@@ -24,7 +26,7 @@ function App() {
       <Route path="/market" element={<Main/>}/>
     </Routes>
     </BrowserRouter>
-   
+   <Footer/>
     </div>
   );
 }

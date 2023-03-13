@@ -13,6 +13,11 @@ const InfoboxTitle = styled.h1`
   font-size: 1.5em;
   text-align: center;
   color: black;
+  min-height: 3rem;
+  max-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const InfoboxImage = styled.img`
@@ -39,8 +44,8 @@ const InfoboxWrapper = styled.section`
   margin-bottom: 5%;
   margin-left: 1%;
   margin-right: 1%;
-  min-height: 32rem;
-  max-height: 32rem;
+  min-height: 30rem;
+  max-height: 30rem;
 
   & .imageText {
     font-size: 1.5rem;

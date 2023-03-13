@@ -1,7 +1,9 @@
 import {Link} from 'react-router-dom'
+import React, { useState } from 'react';
 
 function Navigation()
 {
+    const [categorySelection, set_categorySelection] = useState("eyy");
     return(
         <div className="navbar">
             <Link className="navlink" to="/">Popular</Link>
