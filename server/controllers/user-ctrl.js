@@ -47,10 +47,13 @@ updateUser = async (req, res) => {
                 message: 'User not found!',
             })
         }
-        user.name = body.name
-        user.time = body.time
-        user.rating = body.rating
-        user.points = body.points
+
+        user.username = body.username
+        user.yeets = body.yeets
+        user.items = body.items
+        user.titles = body.titles
+        user.avatar = body.avatar
+        user.answers = body.answers
         user
             .save()
             .then(() => {

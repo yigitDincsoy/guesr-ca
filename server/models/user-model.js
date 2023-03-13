@@ -44,4 +44,10 @@ User.methods.updateAvatar = function(head=null, chest=null, lHand=null, rHand=nu
     if(legs!=null)this.avatar.legs = legs;
 }
 
+User.methods.addAnswer = function(questionID, choice, betAmount)
+{
+    let answ = new Answer(questionID, choice, betAmount)
+    this.answers.push(answ)
+}
+
 module.exports = mongoose.model('users', User)
