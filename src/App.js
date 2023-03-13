@@ -1,9 +1,9 @@
 import './Global.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
-import Header from './components/Header/Header'
-import Main from './components/Main'
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
+import Header from './Components/Header/Header'
+import Main from './Components/Main'
+import Navigation from './Components/Navigation';
+import Footer from './Components/Footer';
 
 
 
