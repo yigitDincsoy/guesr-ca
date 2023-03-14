@@ -1,16 +1,14 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from "../App";
+import { GlobalContext } from "../App";
 
 import Infobox from './Infobox'
 import qData from './FakeData';
 
-
-
 function Main()  {
-    const darkTheme = useContext(ThemeContext);
-    
+    const localGlobal = useContext(GlobalContext);
+
     //Filter the data according to the user selection and create a new, smaller question array to be used for rendering
-    let userSelection = "All";
+    let userSelection = localGlobal.userSelection;
     let filtered_qData = [];
 
     for (let i = 0; i < qData.length; i++) {
@@ -32,7 +30,6 @@ function Main()  {
     return(
             <div className="mainArea">
              {toRender_boxes}
-             {darkTheme}
             </div>
     )
 }
