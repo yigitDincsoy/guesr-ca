@@ -75,9 +75,13 @@ footer {
   -webkit-user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  width: 25%;
+  width: 24%;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.minibutton {
+  width: 12%;
 }
 
 .button-19:after {
