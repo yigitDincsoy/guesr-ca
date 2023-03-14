@@ -54,9 +54,7 @@ updateUser = async (req, res) => {
         user.titles = body.titles
         user.avatar = body.avatar
         user.answers = body.answers
-        user
-            .save()
-            .then(() => {
+        user.save().then(() => {
                 return res.status(200).json({
                     success: true,
                     id: user._id,
