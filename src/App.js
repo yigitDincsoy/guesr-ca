@@ -5,10 +5,12 @@ import Main from './Components/Main'
 import Navigation from './Components/Navigation';
 import Footer from './Components/Footer';
 import React, { useState } from 'react';
+import InscreenGuesses from './Components/InscreenGuesses'
+
 
 export const GlobalContext = React.createContext();
 
-//https://www.nscc.ca/study-at-nscc/student-supports/graduate-employment-services/default.aspx
+
 function App() {
   const [userSelection, set_userSelection] = useState("All");
 
@@ -32,6 +34,7 @@ function App() {
         </GlobalContext.Provider>
       </BrowserRouter>
       <Footer/>
+
     </div>
   );
 }
