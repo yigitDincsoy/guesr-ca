@@ -1,4 +1,3 @@
-const { ReturnDocument } = require('mongodb')
 const User = require('../models/user-model')
 
 createUser = (req, res) => {
@@ -6,15 +5,13 @@ createUser = (req, res) => {
     if (!body) {
         return res.status(400).json({
             success: false,
-            error: 'You must provide a user',
+            error: 'You must provide an user',
         })
     }
-
     const user = new User(body)
     if (!user) {
         return res.status(400).json({ success: false, error: err })
     }
-
     user.save().then(() => {
             return res.status(201).json({
                 success: true,
