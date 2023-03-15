@@ -57,12 +57,27 @@ const InfoboxWrapper = styled.section`
     font-weight: 1000;
     text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
       }
+
+    & .Green {
+      margin-left: 5px;
+      background-color: green;
+      padding: 5px;
+      color: white;
+      }
+      
+    & .Red {
+      background-color: darkred;
+      padding: 5px;
+      color: white;
+      }
+
 `;
 
 
 
 function Infobox(props) {
   const boxData = props.data;
+
   return (
     <InfoboxWrapper bgColor={pastelColours[boxData["id"]]}>
       <InfoboxImage src={"stockphotos/" + boxData["photo"]} />
@@ -70,10 +85,10 @@ function Infobox(props) {
       <p>5 Days 3 Hours</p>
       <InfoboxTitle>{boxData["title"]}</InfoboxTitle>
       <InfoboxButtonArea>
-          <InfoboxButton>Yes</InfoboxButton>
-          <InfoboxButton>No</InfoboxButton>
+          <InfoboxButton>Yes ({boxData["rewardRates"][0]})</InfoboxButton>
+          <InfoboxButton>No ({boxData["rewardRates"][1]})</InfoboxButton>
       </InfoboxButtonArea>
-      <p>300 Yes 500 No</p>
+      <p><span className="Green">{boxData["totalGuesses"][0]} 👍</span><span className="Red"> {boxData["totalGuesses"][1]} 👎</span></p>
     </InfoboxWrapper>
   );
 }

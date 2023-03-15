@@ -1,6 +1,23 @@
 import './Header.css';
+import React, { useState, useContext } from 'react';
+import { GlobalContext } from "../../App";
 
 function Header() {
+
+  const localGlobal = useContext(GlobalContext);
+  
+  function bottomMenuActivation() {
+    if (localGlobal.userGuessSelection == false) {
+      document.getElementById("guessButton").style.borderWidth ="0 0 0px";
+      localGlobal.set_userGuessSelection(true);
+    } else {
+      localGlobal.set_userGuessSelection(false);
+      document.getElementById("guessButton").style.borderWidth ="0 0 4px";
+    }
+
+    console.log(localGlobal.userGuessSelection)
+  }
+
   return (
     <header>
         <div className="header_left">
@@ -12,7 +29,7 @@ function Header() {
         </div>
     
         <div className="header_right">
-        <button className="button-19">Guess!</button>
+        <button className="button-19" id="guessButton" onClick={() => bottomMenuActivation()}>Guess!</button>
         <button className="button-19 minibutton">🔔</button>
         <button className="button-19 minibutton">...</button>
         </div>

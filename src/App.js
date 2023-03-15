@@ -4,17 +4,28 @@ import Header from './Components/Header/Header'
 import Main from './Components/Main'
 import Navigation from './Components/Navigation';
 import Footer from './Components/Footer';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import InscreenGuesses from './Components/InscreenGuesses'
 
 export const GlobalContext = React.createContext();
 
+
 function App() {
   const [userSelection, set_userSelection] = useState("All");
+  const [userGuessSelection, set_userGuessSelection] = useState(false);
+
 
   return (
     <div className="App">
       <BrowserRouter>
-        <GlobalContext.Provider value={{ userSelection , set_userSelection}}>
+        <GlobalContext.Provider
+          value={{
+            userSelection,
+            set_userSelection,
+            userGuessSelection,
+            set_userGuessSelection,
+          }}
+        >
           <Header />
           <Navigation />
           <Routes>
@@ -28,9 +39,11 @@ function App() {
             <Route path="/all" element={<Main />} />
             <Route path="/market" element={<Main />} />
           </Routes>
+          <Footer />
+          { userGuessSelection ? <InscreenGuesses/>: <></>}
+  
         </GlobalContext.Provider>
       </BrowserRouter>
-      <Footer/>
     </div>
   );
 }
