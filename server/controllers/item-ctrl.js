@@ -9,12 +9,10 @@ createItem = (req, res) => {
             error: 'You must provide an item',
         })
     }
-
     const item = new Item(body)
     if (!item) {
         return res.status(400).json({ success: false, error: err })
     }
-
     item.save().then(() => {
             return res.status(201).json({
                 success: true,
