@@ -1,11 +1,15 @@
 
 import styled from "styled-components";
+import React, { useState, useContext } from 'react';
+import { GlobalContext } from "../App";
 
 //OUT-OF-FUNCTION LOGIC
+
 const myBackgroundColor = "white";
 
 const pastelColours = [
     "#836953","#89cff0","#99c5c4","#aa9499","#aaf0d1","#b2fba5","#9adedb","#b39eb5","#bdb0d0","#bee7a5","#befd73","#c1c6fc","#c6a4a4","#c8fb0","#cb99c9","#cef0cc","#cfcfc4","#d6fffe","#d8a1c4","#dea5a4","#deece1","#dfd8e1","#e5d9d3","#e9d1bf","#f49ac2","#f4bfff","#fdfd96","#ff6961","#ff964f","#ff9899","#ffb7ce","#ca9bf7", "#77dd77"];
+
 
 
 //STYLED COMPONENTS
@@ -76,7 +80,12 @@ const InfoboxWrapper = styled.section`
 
 
 function Infobox(props) {
+  const localGlobal = useContext(GlobalContext);
   const boxData = props.data;
+
+
+
+  
 
   return (
     <InfoboxWrapper bgColor={pastelColours[boxData["id"]]}>
@@ -85,7 +94,7 @@ function Infobox(props) {
       <p>5 Days 3 Hours</p>
       <InfoboxTitle>{boxData["title"]}</InfoboxTitle>
       <InfoboxButtonArea>
-          <InfoboxButton>Yes ({boxData["rewardRates"][0]})</InfoboxButton>
+          <InfoboxButton onClick={() => localGlobal.set_userGuessChoosen([4,5,7])}>Yes ({boxData["rewardRates"][0]})</InfoboxButton>
           <InfoboxButton>No ({boxData["rewardRates"][1]})</InfoboxButton>
       </InfoboxButtonArea>
       <p><span className="Green">{boxData["totalGuesses"][0]} 👍</span><span className="Red"> {boxData["totalGuesses"][1]} 👎</span></p>

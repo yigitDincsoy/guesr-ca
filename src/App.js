@@ -5,7 +5,7 @@ import Main from './Components/Main'
 import Navigation from './Components/Navigation';
 import Footer from './Components/Footer';
 import React, { useState, useEffect } from 'react';
-import InscreenGuesses from './Components/InscreenGuesses'
+import BottomInfo from './Components/BottomInfo'
 
 
 export const GlobalContext = React.createContext();
@@ -14,8 +14,13 @@ export const GlobalContext = React.createContext();
 function App() {
   const [userSelection, set_userSelection] = useState("All");
   const [userGuessSelection, set_userGuessSelection] = useState(false);
+  const [userGuessChoosen, set_userGuessChoosen] = useState([1, 2, 3]);
 
 
+  useEffect(() => {
+    console.log("ey")
+   }, [userGuessSelection]); 
+ 
 
   return (
     <div className="App">
@@ -26,6 +31,8 @@ function App() {
             set_userSelection,
             userGuessSelection,
             set_userGuessSelection,
+            userGuessChoosen, 
+            set_userGuessChoosen
           }}
         >
           <Header />
@@ -42,7 +49,7 @@ function App() {
             <Route path="/market" element={<Main />} />
           </Routes>
           <Footer />
-          { userGuessSelection ? <InscreenGuesses/>: <></>}
+          { userGuessSelection ? <BottomInfo/>: <></>}
   
         </GlobalContext.Provider>
       </BrowserRouter>

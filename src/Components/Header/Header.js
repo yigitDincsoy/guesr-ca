@@ -8,7 +8,7 @@ function Header() {
   
   function bottomMenuActivation() {
     if (localGlobal.userGuessSelection == false) {
-      document.getElementById("guessButton").style.borderWidth ="0 0 0px";
+      document.getElementById("guessButton").style.borderWidth ="0 0 1px";
       localGlobal.set_userGuessSelection(true);
     } else {
       localGlobal.set_userGuessSelection(false);

@@ -6,7 +6,7 @@ import qData from './FakeData';
 
 function Main()  {
     const localGlobal = useContext(GlobalContext);
-
+    
     //Filter the data according to the user selection and create a new, smaller question array to be used for rendering
     let userSelection = localGlobal.userSelection;
     let filtered_qData = [];
