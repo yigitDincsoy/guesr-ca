@@ -5,7 +5,7 @@ import styled from "styled-components";
 const myBackgroundColor = "white";
 
 const pastelColours = [
-    "#77dd77","#836953","#89cff0","#99c5c4","#aa9499","#aaf0d1","#b2fba5","#9adedb","#b39eb5","#bdb0d0","#bee7a5","#befd73","#c1c6fc","#c6a4a4","#c8fb0","#cb99c9","#cef0cc","#cfcfc4","#d6fffe","#d8a1c4","#dea5a4","#deece1","#dfd8e1","#e5d9d3","#e9d1bf","#f49ac2","#f4bfff","#fdfd96","#ff6961","#ff964f","#ff9899","#ffb7ce","#ca9bf7"];
+    "#836953","#89cff0","#99c5c4","#aa9499","#aaf0d1","#b2fba5","#9adedb","#b39eb5","#bdb0d0","#bee7a5","#befd73","#c1c6fc","#c6a4a4","#c8fb0","#cb99c9","#cef0cc","#cfcfc4","#d6fffe","#d8a1c4","#dea5a4","#deece1","#dfd8e1","#e5d9d3","#e9d1bf","#f49ac2","#f4bfff","#fdfd96","#ff6961","#ff964f","#ff9899","#ffb7ce","#ca9bf7", "#77dd77"];
 
 
 //STYLED COMPONENTS

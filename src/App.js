@@ -8,7 +8,7 @@ import React, { useState } from 'react';
 
 export const GlobalContext = React.createContext();
 
-
+//https://www.nscc.ca/study-at-nscc/student-supports/graduate-employment-services/default.aspx
 function App() {
   const [userSelection, set_userSelection] = useState("All");
 
