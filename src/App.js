@@ -7,7 +7,6 @@ import Footer from './Components/Footer';
 import React, { useState, useEffect } from 'react';
 import BottomInfo from './Components/BottomInfo'
 
-
 export const GlobalContext = React.createContext();
 
 
@@ -16,11 +15,6 @@ function App() {
   const [userGuessSelection, set_userGuessSelection] = useState(false);
   const [userGuessChoosen, set_userGuessChoosen] = useState([1, 2, 3]);
 
-
-  useEffect(() => {
-    console.log("ey")
-   }, [userGuessSelection]); 
- 
 
   return (
     <div className="App">

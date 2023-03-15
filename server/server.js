@@ -4,6 +4,9 @@ const cors = require('cors')
 
 const db = require('./db')
 const userRouter = require('./routes/user-router')
+const itemRouter = require('./routes/item-router')
+const currentQuestionsRouter = require('./routes/currentQuestions-router')
+const questionRouter = require('./routes/question-router')
 
 const app = express()
 const apiPort = 3000
@@ -19,5 +22,8 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api', userRouter)
+app.use('/api', itemRouter)
+app.use('/api', currentQuestionsRouter)
+app.use('/api', questionRouter)
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
