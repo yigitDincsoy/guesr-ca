@@ -74,9 +74,22 @@ getItemById = async (req, res) => {
     }).catch(err => console.log(err))
 }
 
+getItems = async (req, res) => {
+    await Item.find(req.body).then((item) => {
+
+        if (item===null) {
+            return res
+                .status(404)
+                .json({ success: false, error: `Item not found`})
+        }
+        return res.status(200).json({ success: true, data: item })
+    }).catch(err => console.log(err))
+}
+
 module.exports = {
     createItem,
     updateItem,
     deleteItem,
     getItemById,
+    getItems,
 }
