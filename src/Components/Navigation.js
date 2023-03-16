@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 function Navigation(){
     const localGlobal = useContext(GlobalContext);
-    const local_set_userSelection = localGlobal.set_userSelection;
+    const local_set_categoryFilter = localGlobal.set_categoryFilter;
 
     //Set a category selection state-variable in order to save the current state.
     const [categorySelection, set_categorySelection] = useState("navPopular");
@@ -21,28 +21,28 @@ function Navigation(){
     }
         switch (arg_selection) {
             case "navPopular":
-                local_set_userSelection("All")
+                local_set_categoryFilter("All")
             break;
             case "navAll":
-                local_set_userSelection("All")
+                local_set_categoryFilter("All")
             break;
             case "navPolitics":
-                local_set_userSelection("Politics")
+                local_set_categoryFilter("Politics")
             break;
             case "navEconomy": 
-                local_set_userSelection("Economy")
+                local_set_categoryFilter("Economy")
             break;
             case "navSports":
-                local_set_userSelection("Sports")
+                local_set_categoryFilter("Sports")
             break;
             case "navNews": 
-                local_set_userSelection("News")
+                local_set_categoryFilter("News")
             break;
             case "navGossip":
-                local_set_userSelection("Gossip")
+                local_set_categoryFilter("Gossip")
             break;
             case "navTech": 
-                local_set_userSelection("Tech")
+                local_set_categoryFilter("Tech")
             break;
 
         }

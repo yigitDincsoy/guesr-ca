@@ -11,7 +11,7 @@ export const GlobalContext = React.createContext();
 
 
 function App() {
-  const [userSelection, set_userSelection] = useState("All");
+  const [categoryFilter, set_categoryFilter] = useState("All");
   const [userGuessSelection, set_userGuessSelection] = useState(false);
   const [userGuessChoosen, set_userGuessChoosen] = useState([1, 2, 3]);
 
@@ -21,8 +21,8 @@ function App() {
       <BrowserRouter>
         <GlobalContext.Provider
           value={{
-            userSelection,
-            set_userSelection,
+            categoryFilter,
+            set_categoryFilter,
             userGuessSelection,
             set_userGuessSelection,
             userGuessChoosen, 

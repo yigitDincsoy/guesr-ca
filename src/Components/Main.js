@@ -8,12 +8,12 @@ function Main()  {
     const localGlobal = useContext(GlobalContext);
     
     //Filter the data according to the user selection and create a new, smaller question array to be used for rendering
-    let userSelection = localGlobal.userSelection;
+    let categoryFilter = localGlobal.categoryFilter;
     let filtered_qData = [];
 
     for (let i = 0; i < qData.length; i++) {
 
-        if ((qData[i]["category"] == userSelection) || (userSelection == "All")) {
+        if ((qData[i]["category"] == categoryFilter) || (categoryFilter == "All")) {
             filtered_qData.push(qData[i]);
         }
         
