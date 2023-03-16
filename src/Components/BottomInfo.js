@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import styled from "styled-components";
 import qData from "./FakeData";
 import { GlobalContext } from "../App";
@@ -11,7 +11,7 @@ function BottomInfo() {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 20dvw;
+    width: 25dvw;
     height: 28dvw;
     position: fixed;
     bottom: 0;
@@ -20,9 +20,17 @@ function BottomInfo() {
     font-family: "Josefin Sans", sans-serif;
   `;
 
-  const BI_Content = styled.div``;
+  const BI_Content = styled.div`
+      display: flex;
+    align-items: center;
+    flex-direction: column;`;
+
+
 
   const localGlobal = useContext(GlobalContext);
+
+
+
   let toRender_choosenGuesses = [];
 
   for (let i = 0; i < localGlobal.userGuessCart.length; i++) {
@@ -45,6 +53,7 @@ function BottomInfo() {
       <BI_Content>
         <h2>Your guesses:</h2>
         {toRender_choosenGuesses}
+ 
       </BI_Content>
     </BI_Wrapper>
   );
