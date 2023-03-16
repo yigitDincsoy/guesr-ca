@@ -28,8 +28,8 @@ function BottomInfo() {
     const localGlobal = useContext(GlobalContext);
     let toRender_choosenGuesses = [];
 
-    for (let i = 0; i < localGlobal.userGuessChoosen.length; i++) {
-        let nextInLine = localGlobal.userGuessChoosen[i];
+    for (let i = 0; i < localGlobal.userGuessCart.length; i++) {
+        let nextInLine = localGlobal.userGuessCart[i];
         toRender_choosenGuesses.push(<UNIT_GUESSMADE title={qData[nextInLine]["title"]}/>)
 
     }

@@ -107,9 +107,9 @@ const InfoboxWrapper = styled.section`
 
 function Infobox(props) {
   function boxSelected() {
-    const previousArray = localGlobal.userGuessChoosen;
+    const previousArray = localGlobal.userGuessCart;
     previousArray.push(boxData["id"]);
-    localGlobal.set_userGuessChoosen(previousArray);
+    localGlobal.set_userGuessCart(previousArray);
     }
 
   const localGlobal = useContext(GlobalContext);

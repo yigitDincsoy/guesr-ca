@@ -14,7 +14,7 @@ function App() {
   //Used for filtering content categories
   const [categoryFilter, set_categoryFilter] = useState("All");
   const [bottomUIopen, set_bottomUIopen] = useState(false);
-  const [userGuessChoosen, set_userGuessChoosen] = useState([1, 2, 3]);
+  const [userGuessCart, set_userGuessCart] = useState([]);
 
 
   return (
@@ -26,8 +26,8 @@ function App() {
             set_categoryFilter,
             bottomUIopen,
             set_bottomUIopen,
-            userGuessChoosen, 
-            set_userGuessChoosen
+            userGuessCart, 
+            set_userGuessCart
           }}
         >
           <Header />
