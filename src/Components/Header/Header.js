@@ -7,15 +7,15 @@ function Header() {
   const localGlobal = useContext(GlobalContext);
   
   function bottomMenuActivation() {
-    if (localGlobal.userGuessSelection == false) {
+    if (localGlobal.bottomUIopen == false) {
       document.getElementById("guessButton").style.borderWidth ="0 0 1px";
-      localGlobal.set_userGuessSelection(true);
+      localGlobal.set_bottomUIopen(true);
     } else {
-      localGlobal.set_userGuessSelection(false);
+      localGlobal.set_bottomUIopen(false);
       document.getElementById("guessButton").style.borderWidth ="0 0 4px";
     }
 
-    console.log(localGlobal.userGuessSelection)
+    console.log(localGlobal.bottomUIopen)
   }
 
   return (

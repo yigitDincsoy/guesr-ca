@@ -11,8 +11,9 @@ export const GlobalContext = React.createContext();
 
 
 function App() {
+  //Used for filtering content categories
   const [categoryFilter, set_categoryFilter] = useState("All");
-  const [userGuessSelection, set_userGuessSelection] = useState(false);
+  const [bottomUIopen, set_bottomUIopen] = useState(false);
   const [userGuessChoosen, set_userGuessChoosen] = useState([1, 2, 3]);
 
 
@@ -23,8 +24,8 @@ function App() {
           value={{
             categoryFilter,
             set_categoryFilter,
-            userGuessSelection,
-            set_userGuessSelection,
+            bottomUIopen,
+            set_bottomUIopen,
             userGuessChoosen, 
             set_userGuessChoosen
           }}
@@ -43,7 +44,7 @@ function App() {
             <Route path="/market" element={<Main />} />
           </Routes>
           <Footer />
-          { userGuessSelection ? <BottomInfo/>: <></>}
+          { bottomUIopen ? <BottomInfo/>: <></>}
   
         </GlobalContext.Provider>
       </BrowserRouter>
