@@ -1,38 +1,46 @@
-import './Header.css';
-import React, { useState, useContext } from 'react';
+import "./Header.css";
+import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../App";
 
 function Header() {
-
   const localGlobal = useContext(GlobalContext);
-  
+
   function bottomMenuActivation() {
     if (localGlobal.bottomUIopen == false) {
-      document.getElementById("guessButton").style.borderWidth ="0 0 1px";
+      document.getElementById("guessButton").style.borderWidth = "0 0 1px";
       localGlobal.set_bottomUIopen(true);
     } else {
       localGlobal.set_bottomUIopen(false);
-      document.getElementById("guessButton").style.borderWidth ="0 0 4px";
+      document.getElementById("guessButton").style.borderWidth = "0 0 4px";
     }
 
-    console.log(localGlobal.bottomUIopen)
+    console.log(localGlobal.bottomUIopen);
   }
 
   return (
     <header>
-        <div className="header_left">
-            <button className="button-19">Login</button>
-            <button className="button-19">I'm new</button>
-        </div>
-        <div className="header_mid"><h1>guesr</h1>
-        <p><em>we steal your time & data for our own profit, since 2023</em></p>
-        </div>
-    
-        <div className="header_right">
-        <button className="button-19" id="guessButton" onClick={() => bottomMenuActivation()}>Guess!</button>
+      <div className="header_left">
+        <button className="button-19">Login</button>
+        <button className="button-19">I'm new</button>
+      </div>
+      <div className="header_mid">
+        <h1>guesr</h1>
+        <p>
+          <em>we steal your time & data for our own profit, since 2023</em>
+        </p>
+      </div>
+
+      <div className="header_right">
+        <button
+          className="button-19"
+          id="guessButton"
+          onClick={() => bottomMenuActivation()}
+        >
+          Guess!
+        </button>
         <button className="button-19 minibutton">🔔</button>
         <button className="button-19 minibutton">...</button>
-        </div>
+      </div>
     </header>
   );
 }

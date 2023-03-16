@@ -1,42 +1,42 @@
 header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "header_left header_mid header_right";
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header_left header_mid header_right";
 }
 
 header {
-    font-size: 3rem;
-    padding: 1rem;
-    text-align: center;
-    background-color: #77DD77;
-  }
-  
-  header h1{
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 3rem;
-    margin: 0px;
-  }
-  
-  header p {
-    color: purple;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 1rem;
-    margin: 0px;
-  }
+  font-size: 3rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: #77DD77;
+}
+
+header h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 3rem;
+  margin: 0px;
+}
+
+header p {
+  color: purple;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+  margin: 0px;
+}
 
 .header_left {
-    grid-area: header_left;
+  grid-area: header_left;
 }
 
 .header_mid {
-    grid-area: header_mid;
-    text-align: center;
+  grid-area: header_mid;
+  text-align: center;
 }
 
 .header_right {
-    grid-area: header_right;
+  grid-area: header_right;
 }

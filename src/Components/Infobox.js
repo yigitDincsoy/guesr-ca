@@ -102,15 +102,12 @@ const InfoboxWrapper = styled.section`
   }
 `;
 
-
-
-
 function Infobox(props) {
   function boxSelected() {
     const previousArray = localGlobal.userGuessCart;
     previousArray.push(boxData["id"]);
     localGlobal.set_userGuessCart(previousArray);
-    }
+  }
 
   const localGlobal = useContext(GlobalContext);
   const boxData = props.data;
@@ -122,9 +119,7 @@ function Infobox(props) {
       <p>5 Days 3 Hours</p>
       <InfoboxTitle>{boxData["title"]}</InfoboxTitle>
       <InfoboxButtonArea>
-        <InfoboxButton
-          onClick={() => boxSelected()}
-        >
+        <InfoboxButton onClick={() => boxSelected()}>
           Yes ({boxData["rewardRates"][0]})
         </InfoboxButton>
         <InfoboxButton>No ({boxData["rewardRates"][1]})</InfoboxButton>

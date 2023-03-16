@@ -1,38 +1,31 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 import { GlobalContext } from "../App";
 
-import Infobox from './Infobox'
-import qData from './FakeData';
+import Infobox from "./Infobox";
+import qData from "./FakeData";
 
-function Main()  {
-    const localGlobal = useContext(GlobalContext);
-    
-    //Filter the data according to the user selection and create a new, smaller question array to be used for rendering
-    let categoryFilter = localGlobal.categoryFilter;
-    let filtered_qData = [];
+function Main() {
+  const localGlobal = useContext(GlobalContext);
 
-    for (let i = 0; i < qData.length; i++) {
+  //Filter the data according to the user selection and create a new, smaller question array to be used for rendering
+  let categoryFilter = localGlobal.categoryFilter;
+  let filtered_qData = [];
 
-        if ((qData[i]["category"] == categoryFilter) || (categoryFilter == "All")) {
-            filtered_qData.push(qData[i]);
-        }
-        
+  for (let i = 0; i < qData.length; i++) {
+    if (qData[i]["category"] == categoryFilter || categoryFilter == "All") {
+      filtered_qData.push(qData[i]);
     }
+  }
 
+  //Create another array, that determines how many Infoboxes should be rendered on the screen
+  let toRender_boxes = [];
+  for (let i = 0; i < filtered_qData.length; i++) {
+    toRender_boxes.push(
+      <Infobox className="Infobox" data={filtered_qData[i]} />
+    );
+  }
 
-
-    //Create another array, that determines how many Infoboxes should be rendered on the screen
-    let toRender_boxes = [];
-    for (let i = 0; i < filtered_qData.length; i++) {
-        toRender_boxes.push(<Infobox className="Infobox" data={filtered_qData[i]}/>)
-    }
-
-    return(
-            <div className="mainArea">
-             {toRender_boxes}
-            </div>
-    )
+  return <div className="mainArea">{toRender_boxes}</div>;
 }
-
 
 export default Main;
