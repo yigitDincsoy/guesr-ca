@@ -112,3 +112,12 @@ footer {
 .button-19:disabled {
   cursor: auto;
 }
+
+
+/* Links css for nav bar and login/logout/Signup - colourways to be added once they are decided - T
+
+a { margin-right: 25px;}
+a:link { text-decoration: none; color: ; }
+a:visited { text-decoration: none; color: ;}
+a:hover { text-decoration: none; color: ;}
+a:active { text-decoration: none; color: ;} */
