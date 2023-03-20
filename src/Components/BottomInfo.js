@@ -21,15 +21,12 @@ function BottomInfo() {
   `;
 
   const BI_Content = styled.div`
-      display: flex;
+    display: flex;
     align-items: center;
-    flex-direction: column;`;
-
-
+    flex-direction: column;
+  `;
 
   const localGlobal = useContext(GlobalContext);
-
-
 
   let toRender_choosenGuesses = [];
 
@@ -53,7 +50,6 @@ function BottomInfo() {
       <BI_Content>
         <h2>Your guesses:</h2>
         {toRender_choosenGuesses}
- 
       </BI_Content>
     </BI_Wrapper>
   );

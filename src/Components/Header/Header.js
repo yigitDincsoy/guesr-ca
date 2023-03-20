@@ -26,7 +26,7 @@ function Header() {
       <div className="header_mid">
         <h1>guesr</h1>
         <p>
-          <em>we steal your time & data for our own profit, since 2023</em>
+          we steal your time & data for our own profit, since 2023
         </p>
       </div>
 
@@ -36,7 +36,7 @@ function Header() {
           id="guessButton"
           onClick={() => bottomMenuActivation()}
         >
-          Guess!
+          Guesses
         </button>
         <button className="button-19 minibutton">🔔</button>
         <button className="button-19 minibutton">...</button>

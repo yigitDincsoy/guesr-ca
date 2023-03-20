@@ -2,7 +2,7 @@
 function Footer() {
   return (
     <footer>
-        guesr © 2023, fancy bottom text
+        guesr © 2023
     </footer>
   );
 }

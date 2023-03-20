@@ -12,31 +12,37 @@ header {
   font-size: 3rem;
   padding: 1rem;
   text-align: center;
-  background-color: beige;
+  background-color: 555555;
 }
 
-header h1 {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 3rem;
+header h1 
+{
+  font-family: 'Josefin Sans';
+  font-size: 3.5rem;
   margin: 0px;
+  letter-spacing: -5.5px;
 }
 
-header p {
+header p 
+{
   color: purple;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Sans';
   font-size: 1rem;
   margin: 0px;
 }
 
-.header_left {
+.header_left 
+{
   grid-area: header_left;
 }
 
-.header_mid {
+.header_mid 
+{
   grid-area: header_mid;
   text-align: center;
 }
 
-.header_right {
+.header_right 
+{
   grid-area: header_right;
 }
