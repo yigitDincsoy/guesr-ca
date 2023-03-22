@@ -16,7 +16,7 @@ function BottomInfo() {
     position: fixed;
     bottom: 0;
     right: 0;
-    border: 1.5px solid black;
+    border: 1px solid black;
     font-family: Poppins;
     letter-spacing: -1px;
   `;
