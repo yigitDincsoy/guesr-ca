@@ -3,33 +3,7 @@ import React, { useState, useContext } from "react";
 import { GlobalContext } from "../App";
 import './Infobox.css';
 
-function bgColorAssigner(category) {
-  switch (category) {
-    case "Technology":
-      return("blue")
-      break;
 
-    case "Politics":
-      return("purple")
-      break;
-
-    case "Economy":
-      return("blue")
-      break;
-
-    case "Sports":
-      return("green")
-      break;
-
-    case "News":
-      return("beige")
-      break;
-
-    default:
-      return("white")
-      break;
-  }
-}
 
 //Styled Components
 const InfoboxTitle = styled.h1`
@@ -113,7 +87,7 @@ function Infobox(props) {
   const boxData = props.data;
 
   return (
-    <InfoboxWrapper className={boxData["category"]} bgColor={bgColorAssigner(boxData["category"])}>
+    <InfoboxWrapper className={boxData["category"]} bgColor="lightblue">
       <InfoboxImage src={"stockphotos/" + boxData["photo"]} />
       <div className="imageText">{boxData["category"]}</div>
       <p>5 Days 3 Hours</p>
