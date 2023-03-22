@@ -16,8 +16,9 @@ function BottomInfo() {
     position: fixed;
     bottom: 0;
     right: 0;
-    border: 5px solid black;
-    font-family: "Josefin Sans", sans-serif;
+    border: 1.5px solid black;
+    font-family: Poppins;
+    letter-spacing: -1px;
   `;
 
   const BI_Content = styled.div`

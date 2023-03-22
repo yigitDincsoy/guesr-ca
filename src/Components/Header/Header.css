@@ -1,4 +1,5 @@
-header {
+header 
+{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -8,12 +9,14 @@ header {
     "header_left header_mid header_right";
 }
 
-header {
+header 
+{
   font-size: 3rem;
   padding: 1rem;
   text-align: center;
   background-color: 555555;
 }
+
 
 header h1 
 {
@@ -25,8 +28,7 @@ header h1
 
 header p 
 {
-  color: purple;
-  font-family: 'Josefin Sans';
+  font-family: 'poppins';
   font-size: 1rem;
   margin: 0px;
 }

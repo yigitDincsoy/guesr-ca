@@ -48,6 +48,7 @@ const InfoboxTitle = styled.h1`
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 25px;
 `;
 
 const InfoboxImage = styled.img`
@@ -62,8 +63,13 @@ const InfoboxButtonArea = styled.div`
 `;
 
 const InfoboxButton = styled.button`
-  width: 51%;
-  margin-bottom: 10px;
+  width: 50%;
+  padding: 6px;
+  border-radius: 5px;
+  border-style: none;
+  margin-bottom: 7px;
+  font-family: Poppins;
+  font-weight: bold;
 `;
 
 const InfoboxWrapper = styled.section`
@@ -126,8 +132,8 @@ function Infobox(props) {
         <InfoboxButton>No ({boxData["rewardRates"][1]})</InfoboxButton>
       </InfoboxButtonArea>
       <p>
-        <span className="Green">{boxData["totalGuesses"][0]} 👍</span>
-        <span className="Red"> {boxData["totalGuesses"][1]} 👎</span>
+        <span className="Green">{boxData["totalGuesses"][0]} <i class="icon-thumbs-up"></i></span>
+        <span className="Red"> {boxData["totalGuesses"][1]} <i class="icon-thumbs-down"></i></span>
       </p>
     </InfoboxWrapper>
   );
