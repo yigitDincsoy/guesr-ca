@@ -9,7 +9,7 @@ import './Infobox.css';
 const InfoboxTitle = styled.h1`
   font-size: 1.5em;
   text-align: center;
-  color: black;
+  color: white;
   min-height: 3rem;
   max-height: 3rem;
   display: flex;
@@ -20,17 +20,17 @@ const InfoboxTitle = styled.h1`
 
 const InfoboxImage = styled.img`
   width: 100%;
+  border-radius: 5px 5px 0px 0px;
 `;
 
 const InfoboxButtonArea = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px 0px 15px 0px;
 `;
 
 const InfoboxButton = styled.button`
-  width: 50%;
+  width: 40%;
   padding: 6px;
   border-radius: 5px;
   border-style: none;
@@ -40,21 +40,23 @@ const InfoboxButton = styled.button`
 `;
 
 const InfoboxWrapper = styled.section`
-  background-color: ${(props) => (props.bgColor ? props.bgColor : "white")};
   border: 5px solid white;
-  width: 30%;
+  width: 25%;
+  height: 45%;
   margin: auto;
   margin-bottom: 5%;
   margin-left: 1%;
   margin-right: 1%;
-  min-height: 30rem;
+  /* min-height: 30rem; */
   max-height: 30rem;
-  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: .40px .25px 2px #d3d3d3;
 
   & .imageText {
     font-size: 1.5rem;
+    padding-left: 5px;
     position: relative;
-    top: -30px;
+    top: -28px;
     right: -3px;
     color: white;
     height: 0px;
@@ -87,7 +89,7 @@ function Infobox(props) {
   const boxData = props.data;
 
   return (
-    <InfoboxWrapper className={boxData["category"]} bgColor="lightblue">
+    <InfoboxWrapper className={boxData["category"]}>
       <InfoboxImage src={"stockphotos/" + boxData["photo"]} />
       <div className="imageText">{boxData["category"]}</div>
       <p>5 Days 3 Hours</p>
