@@ -1,42 +1,35 @@
 import styled from "styled-components";
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../App";
+import './Infobox.css';
 
-const pastelColours = [
-  "#836953",
-  "#89cff0",
-  "#99c5c4",
-  "#aa9499",
-  "#aaf0d1",
-  "#b2fba5",
-  "#9adedb",
-  "#b39eb5",
-  "#bdb0d0",
-  "#bee7a5",
-  "#befd73",
-  "#c1c6fc",
-  "#c6a4a4",
-  "#c8fb0",
-  "#cb99c9",
-  "#cef0cc",
-  "#cfcfc4",
-  "#d6fffe",
-  "#d8a1c4",
-  "#dea5a4",
-  "#deece1",
-  "#dfd8e1",
-  "#e5d9d3",
-  "#e9d1bf",
-  "#f49ac2",
-  "#f4bfff",
-  "#fdfd96",
-  "#ff6961",
-  "#ff964f",
-  "#ff9899",
-  "#ffb7ce",
-  "#ca9bf7",
-  "#77dd77",
-];
+function bgColorAssigner(category) {
+  switch (category) {
+    case "Technology":
+      return("blue")
+      break;
+
+    case "Politics":
+      return("purple")
+      break;
+
+    case "Economy":
+      return("blue")
+      break;
+
+    case "Sports":
+      return("green")
+      break;
+
+    case "News":
+      return("beige")
+      break;
+
+    default:
+      return("white")
+      break;
+  }
+}
 
 //Styled Components
 const InfoboxTitle = styled.h1`
@@ -120,7 +113,7 @@ function Infobox(props) {
   const boxData = props.data;
 
   return (
-    <InfoboxWrapper bgColor={pastelColours[boxData["id"]]}>
+    <InfoboxWrapper className={boxData["category"]} bgColor={bgColorAssigner(boxData["category"])}>
       <InfoboxImage src={"stockphotos/" + boxData["photo"]} />
       <div className="imageText">{boxData["category"]}</div>
       <p>5 Days 3 Hours</p>
