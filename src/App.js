@@ -6,6 +6,9 @@ import Navigation from './Components/Navigation';
 import Footer from './Components/Footer';
 import React, { useState, useEffect } from 'react';
 import BottomInfo from './Components/BottomInfo'
+import Login from './Components/Auth/Login'
+import Signup from './Components/Auth/Signup'
+
 
 export const GlobalContext = React.createContext();
 
@@ -42,6 +45,8 @@ function App() {
             <Route path="/tech" element={<Main />} />
             <Route path="/all" element={<Main />} />
             <Route path="/market" element={<Main />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
           <Footer />
           { bottomUIopen ? <BottomInfo/>: <></>}
