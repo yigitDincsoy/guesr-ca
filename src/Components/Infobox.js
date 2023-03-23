@@ -21,9 +21,8 @@ const InfoboxTitle = styled.h1`
 
 const InfoboxImage = styled.img`
   width: 100%;
-  border-radius: 15px 15px 0px 0px;
-  box-shadow: 1px .25px 9px #808080;
-  opacity: 90%;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: .25px .25px 1px #808080;
 `;
 
 const InfoboxButtonArea = styled.div`
@@ -33,27 +32,30 @@ const InfoboxButtonArea = styled.div`
 `;
 
 const InfoboxButton = styled.button`
-  width: 40%;
-  padding: 6px;
-  border-radius: 5px;
+  width: 44%;
+  padding: 12px;
+  border-radius: 10px;
   border-style: none;
-  margin-bottom: 7px;
-  font-family: Poppins;
+  margin-bottom: 8px;
+  font-family: roboto;
+  font-size: 16px;
   font-weight: bold;
+  //box-shadow:  1px 1px 1px #d3d3d3;
 `;
 
 const InfoboxWrapper = styled.section`
   // border: 5px solid white;
   width: 25%;
   height: 40%;
-  margin: auto;
-  margin-bottom: 5%;
+  // margin: auto;
+  margin-bottom: 3%;
   margin-left: 1%;
   margin-right: 1%;
+  padding: 10px 10px 5px 10px;
   // min-height: 30rem; 
   // max-height: 30rem;
   border-radius: 15px;
-  box-shadow: inset .5px 2px 1px #d3d3d3, 6px 4px 9px #d3d3d3;
+  box-shadow:  6px 6px 9px #d3d3d3; //inset .5px 2px 1px #d3d3d3,
   transition: all 0.2s ease-in-out; 
 
   &:hover {
@@ -61,15 +63,15 @@ const InfoboxWrapper = styled.section`
   }
 
   & .imageText {
-    font-size: 1.5rem;
-    padding-left: 5px;
+    font-size: 28px;
+    padding-left: 9px;
     position: relative;
     top: -28px;
     right: -3px;
     color: white;
-    height: 0px;
-    font-weight: 1000;
-    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    font-weight: bold;
+    letter-spacing: -1px;
+    text-shadow: 0 0 1px black;
   }
 
   & .Green {
@@ -106,9 +108,9 @@ function Infobox(props) {
       <InfoboxTitle>{boxData["title"]}</InfoboxTitle>
       <InfoboxButtonArea>
         <InfoboxButton onClick={() => boxSelected()}>
-          Yes ({boxData["rewardRates"][0]})
+          yes ({boxData["rewardRates"][0]})
         </InfoboxButton>
-        <InfoboxButton>No ({boxData["rewardRates"][1]})</InfoboxButton>
+        <InfoboxButton>no ({boxData["rewardRates"][1]})</InfoboxButton>
       </InfoboxButtonArea>
       <p>
         <span className="Green">{boxData["totalGuesses"][0]} <i class="icon-thumbs-up"></i></span>

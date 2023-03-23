@@ -1,25 +1,25 @@
-.Gossip {
+.gossip {
   background-color: rgb(221, 195, 245);
 
 }
-.Politics {
+.politics {
   background-color: rgb(247, 194, 153);
 }
 
-.Tech {
+.tech {
   background-color: rgb(201, 220, 182);
 }
 
 
-.Economy {
+.economy {
   background-color: rgb(246, 233, 152);
 }
 
-.Sports {
+.sports {
   background-color: rgb(194, 210, 244);
 }
 
-.News {
+.news {
   background-color: pink;
 }
 
