@@ -7,7 +7,7 @@ import './Infobox.css';
 
 //Styled Components
 const InfoboxTitle = styled.h1`
-  font-size: 1.5em;
+  font-size: 20px;
   text-align: center;
   color: white;
   min-height: 3rem;
@@ -16,11 +16,14 @@ const InfoboxTitle = styled.h1`
   align-items: center;
   justify-content: center;
   line-height: 25px;
+  letter-spacing: .25px;
 `;
 
 const InfoboxImage = styled.img`
   width: 100%;
-  border-radius: 5px 5px 0px 0px;
+  border-radius: 15px 15px 0px 0px;
+  box-shadow: 1px .25px 9px #808080;
+  opacity: 90%;
 `;
 
 const InfoboxButtonArea = styled.div`
@@ -40,17 +43,22 @@ const InfoboxButton = styled.button`
 `;
 
 const InfoboxWrapper = styled.section`
-  border: 5px solid white;
+  // border: 5px solid white;
   width: 25%;
-  height: 45%;
+  height: 40%;
   margin: auto;
   margin-bottom: 5%;
   margin-left: 1%;
   margin-right: 1%;
-  /* min-height: 30rem; */
-  max-height: 30rem;
-  border-radius: 10px;
-  box-shadow: .40px .25px 2px #d3d3d3;
+  // min-height: 30rem; 
+  // max-height: 30rem;
+  border-radius: 15px;
+  box-shadow: inset .5px 2px 1px #d3d3d3, 6px 4px 9px #d3d3d3;
+  transition: all 0.2s ease-in-out; 
+
+  &:hover {
+    transform: scale(1.03);
+  }
 
   & .imageText {
     font-size: 1.5rem;
@@ -65,14 +73,16 @@ const InfoboxWrapper = styled.section`
   }
 
   & .Green {
-    margin-left: 5px;
+    margin-left: 20px;
     background-color: green;
+    opacity: 50%;
     padding: 5px;
     color: white;
   }
 
   & .Red {
     background-color: darkred;
+    opacity: 50%;
     padding: 5px;
     color: white;
   }
