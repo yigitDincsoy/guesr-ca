@@ -23,3 +23,13 @@
   background-color: pink;
 }
 
+#boxTimer{
+ padding-left: 10px;
+ position: relative;
+ top: -12px;
+ font-family: roboto;
+ font-weight: 200%;
+ color: white;
+ font-size: 16px;
+ letter-spacing: -1px;
+}
