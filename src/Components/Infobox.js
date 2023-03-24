@@ -8,11 +8,10 @@ import './Infobox.css';
 //Styled Components
 const InfoboxTitle = styled.h1`
   font-size: 18px;
-  font-family: poppins;
+  font-family: roboto;
   text-align: center;
   position: relative;
   top: -10px;
-  color: white;
   /* min-height: 3rem; */
   /* max-height: 3rem; */
   display: flex;
@@ -45,7 +44,7 @@ const InfoboxButton = styled.button`
   font-size: 16px;
   letter-spacing: -.5px;
   /* font-weight: bold; */
-  box-shadow:  1.5px 1px 2.5px #63666A;
+  box-shadow: inset .75px .75px 3.5px lightgrey;//#63666A;
 `;
 
 const InfoboxWrapper = styled.section`
@@ -114,7 +113,7 @@ function Infobox(props) {
         <InfoboxButton onClick={() => boxSelected()}>
           yes ({boxData["rewardRates"][0]})
         </InfoboxButton>
-        <InfoboxButton><i class="icon-thumbs-down"></i> ({boxData["rewardRates"][1]})</InfoboxButton>
+        <InfoboxButton>no ({boxData["rewardRates"][1]})</InfoboxButton>
       </InfoboxButtonArea>
       <p>
         <span className="Green">{boxData["totalGuesses"][0]} <i class="icon-thumbs-up"></i></span>
