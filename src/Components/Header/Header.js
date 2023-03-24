@@ -21,7 +21,7 @@ function Header() {
     <header>
       <div className="header_left">
         <button className="button-19">login</button>
-        <button className="button-19">register</button>
+        <button className="button-19">sign up</button>
       </div>
       <div className="header_mid">
         <h1>guesr</h1>

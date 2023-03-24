@@ -6,8 +6,8 @@ import { GlobalContext } from "../App";
 function BottomInfo() {
   const BI_Wrapper = styled.div`
     text-align: center;
-    background-color: beige;
-    color: black;
+    backdrop-filter: blur(50px);
+    color: #636262;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -16,7 +16,8 @@ function BottomInfo() {
     position: fixed;
     bottom: 0;
     right: 0;
-    border: 1px solid black;
+    border: 1px solid #939799;
+    border-radius: 10px;
     font-family: Poppins;
     letter-spacing: -1px;
   `;
@@ -49,7 +50,7 @@ function BottomInfo() {
   return (
     <BI_Wrapper>
       <BI_Content>
-        <h2>Your guesses:</h2>
+        <h2>your guesses:</h2>
         {toRender_choosenGuesses}
       </BI_Content>
     </BI_Wrapper>

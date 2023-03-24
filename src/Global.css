@@ -16,18 +16,20 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
-    font-family: 'Josefin Sans', sans-serif;
+    color: #636262;
+    font-family: poppins;
+    font-weight: bold;
 }
 
 .navlink{
     margin-left:8px;
     margin-right:8px;
+    
 }
 
 
 a{
-  color: whitesmoke;
+  /* color: whitesmoke; */
   background-color: transparent;
   text-decoration: none;
   padding-top: 5px;
@@ -45,6 +47,7 @@ footer {
 
 .button-19 {
   appearance: button;
+  font-family: poppins;
   border: solid transparent;
   border-radius: 15px;
   border-width: 0 0 4px;
@@ -93,10 +96,10 @@ footer {
   user-select: auto;
 }
 
-.button-19:hover:not(:disabled) {
+/* .button-19:hover:not(:disabled) {
   filter: brightness(1.1);
   -webkit-filter: brightness(1.1);
-}
+} */
 
 .button-19:disabled {
   cursor: auto;
@@ -127,7 +130,7 @@ footer {
 }
 
 
-/* Links css for nav bar and login/logout/Signup - colourways to be added once they are decided - T
+/* Links css for nav bar and login/logout/Signup
 
 a { margin-right: 25px;}
 a:link { text-decoration: none; color: ; }

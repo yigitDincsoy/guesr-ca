@@ -42,6 +42,11 @@ const InfoboxButton = styled.button`
   letter-spacing: -0.5px;
   /* font-weight: bold; */
   /* box-shadow: inset .75px .75px 3.5px lightgrey;//#63666A; */
+
+&:hover {
+  color: white;
+  transform: scale(1.03);
+}
 `;
 
 const InfoboxWrapper = styled.section`

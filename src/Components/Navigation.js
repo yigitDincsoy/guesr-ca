@@ -50,12 +50,12 @@ function Navigation() {
   return (
     <div className="navbar">
       <Link
-        id="navPopular"
+        id="navTrending"
         className="navlink"
         to="/"
-        onClick={() => scr_selectionMade("navPopular")}
+        onClick={() => scr_selectionMade("navTrending")}
       >
-        Popular
+        trending
       </Link>
       <Link
         id="navPolitics"
@@ -63,7 +63,7 @@ function Navigation() {
         to="/politics"
         onClick={() => scr_selectionMade("navPolitics")}
       >
-        Politics
+        politics
       </Link>
       <Link
         id="navEconomy"
@@ -71,7 +71,7 @@ function Navigation() {
         to="/economy"
         onClick={() => scr_selectionMade("navEconomy")}
       >
-        Economy
+        economy
       </Link>
       {/* <Link
         id="navSports"
@@ -95,7 +95,7 @@ function Navigation() {
         to="/gossip"
         onClick={() => scr_selectionMade("navGossip")}
       >
-        celeb
+        gossip
       </Link>
       <Link
         id="navTech"
@@ -103,7 +103,7 @@ function Navigation() {
         to="/tech"
         onClick={() => scr_selectionMade("navTech")}
       >
-        Technology
+        tech
       </Link>
       <Link
         id="navAll"
@@ -111,7 +111,7 @@ function Navigation() {
         to="/all"
         onClick={() => scr_selectionMade("navAll")}
       >
-        All
+        all
       </Link>
     </div>
   );

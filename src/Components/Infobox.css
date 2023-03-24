@@ -3,7 +3,7 @@
   color: rgb(56, 1, 56);
 
 }
-.politics {
+.economy {
   background-color: rgb(247, 194, 153);
   color: rgb(163, 74, 1);
 }
@@ -19,10 +19,10 @@
   color: rgb(1, 1, 111);
 }
 
-.economy {
+/* .economy {
   background-color: pink;
   color: rgb(159, 57, 74);
-}
+} */
 
 #boxTimer{
  padding-left: 11px;
