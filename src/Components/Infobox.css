@@ -1,23 +1,36 @@
-.Politics {
-  
+.gossip {
+  background-color: rgb(221, 195, 245);
+  color: blue;
+
+}
+.politics {
+  background-color: rgb(247, 194, 153);
 }
 
-.Tech {
-  
+.tech {
+  background-color: rgb(201, 220, 182);
 }
 
-.Gossip {
-  
+
+.economy {
+  background-color: rgb(246, 233, 152);
 }
 
-.Economy {
-  
+.sports {
+  background-color: rgb(194, 210, 244);
 }
 
-.Sports {
-  
+.news {
+  background-color: pink;
 }
 
-.News {
-  
+#boxTimer{
+ padding-left: 10px;
+ position: relative;
+ top: -12px;
+ font-family: roboto;
+ font-weight: 200%;
+ color: white;
+ font-size: 16px;
+ letter-spacing: -1px;
 }

@@ -1,18 +1,16 @@
-import './login.css'
-import {useAuth} from './AuthProvider'
-import {useRef} from 'react'
+import "./login.css";
+import { useAuth } from "./AuthProvider";
+import { useRef } from "react";
 
-function Login()
-{
-    const authContext = useAuth();
-    const userRef = useRef();
-    const pwdRef = useRef();
+function Login() {
+  const authContext = useAuth();
+  const userRef = useRef();
+  const pwdRef = useRef();
 
-    function onAttemptLogin(e)
-    {
-        e.preventDefault();
-        authContext.signin(userRef.current.value,pwdRef.current.value)
-    }
+  function onAttemptLogin(e) {
+    e.preventDefault();
+    authContext.signin(userRef.current.value, pwdRef.current.value);
+  }
 
     return(
         <div className="loginform">
@@ -27,5 +25,4 @@ function Login()
     )
 }
 
-
-export default Login
+export default Login;

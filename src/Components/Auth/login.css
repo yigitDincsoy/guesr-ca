@@ -1,83 +1,118 @@
-/* Frosted Log-in/Log-out option */
-/* This css will be moved or organized into a master css file depending on how our app is laid out - T
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
-h3
-{
-    padding-bottom: 17px;
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
-.logoutmsg
-{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    padding: 35px;
-    box-sizing: border-box;
-    backdrop-filter: blur(15px);
-    text-align: center;
-    color: rgb(255, 239, 239) ;
-    font-size: 20px;
-    background-color: rgba(24, 24, 24, 0.281);
+body {
+  min-height: 100vh;
+  font-family: 'Raleway', sans-serif;
 }
 
-form
+h1
 {
-    margin-top: 25px;
-    height: 320px;
-    width: 325px;
-    background-color: rgba(255,255,255,0.13);
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(238, 237, 237, 0.1);
-    box-shadow: 50px 0px 90px rgba(72, 72, 76, 0.6);
-    padding: 35px 35px;
-    font-family: 'Poppins',sans-serif;
-    color: #ffffff;
-    letter-spacing: 0.5px;
-    line-height: 25px;
-    text-align: center;
+  letter-spacing: -3px;
+  /* color: #636262; */
+  font-weight: bold;
+  font-size: 33px;
 }
 
-input
-{
-    display: block;
-    height: 40px;
-    width: 100%;
-    background-color: rgba(24, 24, 24, 0.281);
-    border-radius: 3px;
-    padding: 0 10px;
-    font-size: 14px;
-    color: #e5e5e5;
-    outline: none;
-    border-style: none;
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-::placeholder
-{
-    color: #e5e5e5;
-}
-
-button
-{
-    margin-top: 10px;
-    width: 90%;
-    height: 22%;
-    background-color: #eae7e7;
-    color: #4e4e52;
-    font-size: 19px;
-    font-weight: bold;
-    letter-spacing: .5px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 100px 1px rgb(99, 99, 99);
-    cursor: pointer;
-    border-style: none;
+.container:hover .top:before,
+.container:hover .top:after,
+.container:hover .bottom:before,
+.container:hover .bottom:after {
+  margin-left: 200px;
+  transform-origin: -200px 50%;
+  transition-delay: .1s;
 }
 
 
+/* Time for center to appear*/
+.container:hover .center 
+{
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+.top:before,
+.top:after,
+.bottom:before,
+.bottom:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 200vmax;
+  height: 200vmax;
+  top: 50%;
+  left: 50%;
+  margin-top: -100vmax;
+  transform-origin: 0 50%;
+  transition: all 0.5s cubic-bezier(0.445, 0.05, 0, 1);
+  z-index: 10;
+  opacity: 0.65;
+  transition-delay: 0.2s;
+}
+
+.top:before {
+  transform: rotate(45deg);
+  background: #e797d2;
+}
+
+.top:after {
+  transform: rotate(135deg);
+  background: #c1f7cb;
+}
+
+.bottom:before {
+  transform: rotate(-45deg);
+  background: #b8eafa;
+}
+
+.bottom:after {
+  transform: rotate(-135deg);
+  background: #f9b8d2;
+}
+
+.center {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  opacity: 0;
+  transition: all 0.9s cubic-bezier(0.445, 0.05, 0, 1);
+  transition-delay: 0s;
+  color: #333;
+}
+
+.center input {
+  width: 100%;
+  padding: 15px;
+  margin: 5px;
+  border-radius: 1px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+
+.center.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
 
 /* Form Validation */
 /* 

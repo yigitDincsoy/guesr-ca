@@ -1,7 +1,7 @@
 const questionData = [
     {
     id:0,
-    category: "Gossip",
+    category: "gossip",
     title: "Elon Musk tweets about Dogecoin.",
     photo: "elon.png",
     rewardRates: [1.05, 2.75],
@@ -11,7 +11,7 @@ const questionData = [
   },
   {
     id:1,
-    category: "Politics",
+    category: "politics",
     title: "Jeb Bush wins the US presidential election.",
     photo: "jebbush.png",
     rewardRates: [3.75, 1.75],
@@ -21,7 +21,7 @@ const questionData = [
   },
    {
     id:2,
-    category: "Tech",
+    category: "tech",
     title: "Counter Strike 2 gets announced.",
     photo: "gamer.png",
     rewardRates: [1.01, 1.25],
@@ -31,7 +31,7 @@ const questionData = [
   },
  {
     id:3,
-    category: "Gossip",
+    category: "gossip",
     title: "Adele gets married to her boyfriend.",
     photo: "adele.png",
     rewardRates: [3.05, 12.75],
@@ -41,7 +41,7 @@ const questionData = [
   },
   {
     id:4,
-    category: "Economy",
+    category: "economy",
     photo: "economy.png",
     title: "USD/CAD exchange ratio reaches 1.45.",
     rewardRates: [3.05, 1.75],
@@ -51,7 +51,7 @@ const questionData = [
   },
    {
     id:5,
-    category: "Sports",
+    category: "sports",
     photo: "hockey.png",
     title: "Halifax Mooseheads scores at least 10 points this night.",
     rewardRates: [1.25, 2.75],
@@ -61,7 +61,7 @@ const questionData = [
   },
    {
     id:6,
-    category: "News",
+    category: "news",
     photo: "hamburg.png",
     title: "BurgerChain releases a new hamburger.",
     rewardRates: [1.35, 1.75],
@@ -71,7 +71,7 @@ const questionData = [
   },
   {
     id:7,
-    category: "News",
+    category: "news",
     photo: "war.png",
     title: "World War 3 begins.",
     rewardRates: [41.05, 1.01],
@@ -81,7 +81,7 @@ const questionData = [
   },
  {
     id:8,
-    category: "Economy",
+    category: "economy",
     photo: "economy.png",
     title: "Interest rates will get increased.",
     rewardRates: [42.05, 2.75],

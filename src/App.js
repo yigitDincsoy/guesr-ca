@@ -33,7 +33,7 @@ function App() {
             set_userGuessCart
           }}
         >
-          <Header />
+          <Header/>
           <Navigation />
           <Routes>
             <Route path="/" element={<Main />} />
