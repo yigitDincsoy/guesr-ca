@@ -20,6 +20,7 @@ function Login()
             <h3>Login</h3>
                 <input type="text" placeholder="Email" required pattern=".*(.com|.net|.org|.ca)$"ref={userRef}></input><br/>
                 <input type="password" placeholder="Password" minlength="4" ref={pwdRef}></input><br/>
+                <input type=""
                 <button onClick={onAttemptLogin}>Login</button>
             </form>
         </div>
