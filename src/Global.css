@@ -1,13 +1,10 @@
-.App 
-{
+.App {
   font-family: 'Roboto';
   background-color: #f9f6f6;
-  
 }
 
 
-.mainArea 
-{
+.mainArea {
   width: 80%;
   margin: auto;
   display: flex;
@@ -15,8 +12,7 @@
   margin-top: 3%;
 }
 
-.navbar
-{
+.navbar{
     display:flex;
     align-items: center;
     justify-content: center;
@@ -24,15 +20,13 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.navlink
-{
+.navlink{
     margin-left:8px;
     margin-right:8px;
 }
 
 
-a
-{
+a{
   color: whitesmoke;
   background-color: transparent;
   text-decoration: none;
@@ -41,8 +35,7 @@ a
 }
 
 
-footer 
-{
+footer {
   font-family: 'Poppins';
   text-align: center;
   color: white;
@@ -52,25 +45,18 @@ footer
 
 .button-19 {
   appearance: button;
-  background-color: #1899D6;
   border: solid transparent;
-  border-radius: 16px;
+  border-radius: 15px;
   border-width: 0 0 4px;
   box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
-  font-family: din-round,sans-serif;
   font-size: 15px;
-  font-weight: 700;
-  letter-spacing: .8px;
   line-height: 20px;
-  margin: 0;
   outline: none;
-  overflow: visible;
   padding: 13px 16px;
   text-align: center;
-  text-transform: uppercase;
   touch-action: manipulation;
   transform: translateZ(0);
   transition: filter .2s;
@@ -87,13 +73,9 @@ footer
   width: 12%;
 }
 
-.cutebutton {
-  background-color: pink;
-}
-
 .button-19:after {
   background-clip: padding-box;
-  background-color: #1CB0F6;
+  background-color: rgb(24, 47, 0);
   border: solid transparent;
   border-radius: 16px;
   border-width: 0 0 4px;

@@ -51,9 +51,9 @@ const questionData = [
   },
    {
     id:5,
-    category: "sports",
+    category: "tech",
     photo: "hockey.png",
-    title: "Halifax Mooseheads scores at least 10 points this night.",
+    title: "stuff happens.",
     rewardRates: [1.25, 2.75],
     totalGuesses: [123, 75],
     openDate: new Date("2022-01-15"),
@@ -61,7 +61,7 @@ const questionData = [
   },
    {
     id:6,
-    category: "news",
+    category: "economy",
     photo: "hamburg.png",
     title: "BurgerChain releases a new hamburger.",
     rewardRates: [1.35, 1.75],
@@ -71,9 +71,9 @@ const questionData = [
   },
   {
     id:7,
-    category: "news",
+    category: "gossip",
     photo: "war.png",
-    title: "World War 3 begins.",
+    title: "someone is gay",
     rewardRates: [41.05, 1.01],
     totalGuesses: [123, 532],
     openDate: new Date("2022-01-15"),

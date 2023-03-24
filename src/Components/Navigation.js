@@ -73,29 +73,29 @@ function Navigation() {
       >
         Economy
       </Link>
-      <Link
+      {/* <Link
         id="navSports"
         className="navlink"
         to="/sports"
         onClick={() => scr_selectionMade("navSports")}
       >
         Sports
-      </Link>
-      <Link
+      </Link> */}
+      {/* <Link
         id="navNews"
         className="navlink"
         to="/news"
         onClick={() => scr_selectionMade("navNews")}
       >
         News
-      </Link>
+      </Link> */}
       <Link
         id="navGossip"
         className="navlink"
         to="/gossip"
         onClick={() => scr_selectionMade("navGossip")}
       >
-        Gossip
+        celeb
       </Link>
       <Link
         id="navTech"

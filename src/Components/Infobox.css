@@ -1,36 +1,42 @@
 .gossip {
   background-color: rgb(221, 195, 245);
-  color: blue;
+  color: rgb(56, 1, 56);
 
 }
 .politics {
   background-color: rgb(247, 194, 153);
+  color: rgb(163, 74, 1);
 }
 
 .tech {
   background-color: rgb(201, 220, 182);
+  color: green;
 }
 
+
+.politics {
+  background-color: rgb(194, 210, 244);
+  color: rgb(1, 1, 111);
+}
 
 .economy {
-  background-color: rgb(246, 233, 152);
-}
-
-.sports {
-  background-color: rgb(194, 210, 244);
-}
-
-.news {
   background-color: pink;
+  color: rgb(159, 57, 74);
 }
 
 #boxTimer{
- padding-left: 10px;
+ padding-left: 11px;
+ padding-right: 18px;;
  position: relative;
  top: -12px;
- font-family: roboto;
- font-weight: 200%;
- color: white;
- font-size: 16px;
- letter-spacing: -1px;
+ font-family: poppins;
+ font-weight: bold;
+ color: black;
+ font-size: 12px;
+}
+
+.thumbsArea, .timerArea {
+  display: inline;
+  position:relative;
+  top: -12px;
 }
