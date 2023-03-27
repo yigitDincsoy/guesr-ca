@@ -8,6 +8,7 @@
   width: 80%;
   margin: auto;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin-top: 3%;
 }
@@ -19,6 +20,7 @@
     color: #636262;
     font-family: poppins;
     font-weight: bold;
+    font-size: 17px;
 }
 
 .navlink{
@@ -38,10 +40,16 @@ a{
 
 
 footer {
+  padding: 40px;
   font-family: 'Poppins';
   text-align: center;
-  color: white;
+  color:  #636262;
   font-size: 13px;
+}
+
+footer p{
+  font-style: italic;
+  font-size: 10px;
 }
 
 
@@ -68,8 +76,7 @@ footer {
   vertical-align: middle;
   white-space: nowrap;
   width: 24%;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .minibutton {
@@ -130,9 +137,10 @@ footer {
 }
 
 
+a:hover { text-decoration: none; color: pink}
 /* Links css for nav bar and login/logout/Signup
 
-a { margin-right: 25px;}
+
 a:link { text-decoration: none; color: ; }
 a:visited { text-decoration: none; color: ;}
 a:hover { text-decoration: none; color: ;}

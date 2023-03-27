@@ -8,7 +8,7 @@ function Navigation() {
   const local_set_categoryFilter = localGlobal.set_categoryFilter;
 
   //Set a category selection state-variable in order to save the current state.
-  const [categorySelection, set_categorySelection] = useState("navPopular");
+  const [categorySelection, set_categorySelection] = useState("navTrending");
 
   function scr_selectionMade(arg_selection) {
     //Update the state-variable according to user selection
@@ -16,11 +16,11 @@ function Navigation() {
     //Reset the previous selection to white
     document.getElementById(categorySelection).style.color = "white";
     //Set the new variable to blue
-    if (arg_selection != "navPopular") {
+    if (arg_selection != "navTrending") {
       document.getElementById(arg_selection).style.color = "yellow";
     }
     switch (arg_selection) {
-      case "navPopular":
+      case "navTrending":
         local_set_categoryFilter("All");
         break;
       case "navAll":
@@ -32,12 +32,12 @@ function Navigation() {
       case "navEconomy":
         local_set_categoryFilter("Economy");
         break;
-      case "navSports":
-        local_set_categoryFilter("Sports");
-        break;
-      case "navNews":
-        local_set_categoryFilter("News");
-        break;
+      // case "navSports":
+      //   local_set_categoryFilter("Sports");
+      //   break;
+      // case "navNews":
+      //   local_set_categoryFilter("News");
+      //   break;
       case "navGossip":
         local_set_categoryFilter("Gossip");
         break;

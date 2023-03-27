@@ -40,13 +40,14 @@ const InfoboxButton = styled.button`
   font-weight: bold;
   font-size: 16px;
   letter-spacing: -0.5px;
-  /* font-weight: bold; */
-  /* box-shadow: inset .75px .75px 3.5px lightgrey;//#63666A; */
-
-&:hover {
-  color: white;
-  transform: scale(1.03);
-}
+  transition: 0.2s all;
+  /* Adding transformation when the button is active */
+  &:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 0px 0px 0px 1.5px rgba(0, 0, 0, 0.15);
+    /* Lowering the shadow */
+  }
 `;
 
 const InfoboxWrapper = styled.section`
@@ -104,7 +105,6 @@ function Infobox(props) {
       <div className="imageText">{boxData["category"]}</div>
       <p id="boxTimer" className="timerArea">
         5d 59m 50s
-
       </p>{" "}
       <div className="thumbsArea">
         <span className="upVotes">

@@ -34,13 +34,14 @@ function App() {
           }}
         >
           <Header/>
-          <Navigation />
+          {<Navigation /> }
           <Routes>
+     
             <Route path="/" element={<Main />} />
             <Route path="/politics" element={<Main />} />
             <Route path="/economy" element={<Main />} />
-            <Route path="/sports" element={<Main />} />
-            <Route path="/news" element={<Main />} />
+            {/* <Route path="/sports" element={<Main />} />
+            <Route path="/news" element={<Main />} /> */}
             <Route path="/gossip" element={<Main />} />
             <Route path="/tech" element={<Main />} />
             <Route path="/all" element={<Main />} />
