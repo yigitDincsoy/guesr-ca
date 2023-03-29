@@ -1,8 +1,7 @@
 .App {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   background-color: #f9f6f6;
 }
-
 
 .mainArea {
   width: 80%;
@@ -13,49 +12,68 @@
   margin-top: 3%;
 }
 
-.navbar{
-    display:flex;
-    /* align-items: center; */
-    justify-content: center;
-    color: #636262;
-    font-family: poppins;
-    font-weight: bold;
-    font-size: 17px;
+.navbar {
+  display: flex;
+  justify-content: center;
+  color: #636262;
+  font-family: poppins;
+  font-weight: bold;
+  font-size: 17px;
 }
 
-.navlink{
-    margin-left: 10px;
-    margin-right: 10px;
+.navlink {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-#navTrending:hover { background-image: linear-gradient( to right, violet, indigo, blue, green, orange, red); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
-#navPolitics:hover { color: rgb(194, 210, 244); }
-#navEconomy:hover { color: rgb(247, 194, 153); }
-#navGossip:hover { color:  rgb(221, 195, 245);}
-#navTech:hover { color: rgb(201, 220, 182); }
+#navTrending:hover {
+  background-image: linear-gradient(
+    to right,
+    violet,
+    indigo,
+    blue,
+    green,
+    orange,
+    red
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#navPolitics:hover {
+  color: rgb(194, 210, 244);
+}
+#navEconomy:hover {
+  color: rgb(247, 194, 153);
+}
+#navGossip:hover {
+  color: rgb(221, 195, 245);
+}
+#navTech:hover {
+  color: rgb(201, 220, 182);
+}
 
-a:hover { text-decoration: none; }
+a:hover {
+  text-decoration: none;
+}
 
-a{
+a {
   color: #3c3c3c;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
-
 footer {
   padding: 40px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   text-align: center;
   color: #636262;
   font-size: 13px;
 }
 
-footer p{
+footer p {
   font-style: italic;
   font-size: 10px;
 }
-
 
 .button-19 {
   appearance: button;
@@ -74,14 +92,14 @@ footer p{
   text-align: center;
   touch-action: manipulation;
   transform: translateZ(0);
-  transition: filter .2s;
+  transition: filter 0.2s;
   user-select: none;
   -webkit-user-select: none;
   vertical-align: middle;
   white-space: nowrap;
   width: 24%;
   margin-right: 5px;
-  color:#636262;
+  color: #636262;
 }
 
 .minibutton {
@@ -117,7 +135,6 @@ footer p{
   cursor: auto;
 }
 
-
 /* Scroll bars */
 /* width */
 ::-webkit-scrollbar {
@@ -126,27 +143,17 @@ footer p{
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(220, 219, 219); 
+  background: rgb(220, 219, 219);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(220, 219, 219); 
+  background: rgb(220, 219, 219);
 }
-
-
-
-/* Links css for nav bar and login/logout/Signup
-
-
-a:link { text-decoration: none; color: ; }
-a:visited { text-decoration: none; color: ;}
-a:hover { text-decoration: none; color: ;}
-a:active { text-decoration: none; color: ;} */
