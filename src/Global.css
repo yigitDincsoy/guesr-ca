@@ -15,7 +15,7 @@
 
 .navbar{
     display:flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     color: #636262;
     font-family: poppins;
@@ -26,12 +26,10 @@
 .navlink{
     margin-left:8px;
     margin-right:8px;
-    
 }
 
 
 a{
-  /* color: whitesmoke; */
   background-color: transparent;
   text-decoration: none;
   padding-top: 5px;
@@ -43,7 +41,7 @@ footer {
   padding: 40px;
   font-family: 'Poppins';
   text-align: center;
-  color:  #636262;
+  color: #636262;
   font-size: 13px;
 }
 
@@ -60,10 +58,10 @@ footer p{
   border-radius: 15px;
   border-width: 0 0 4px;
   box-sizing: border-box;
-  color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
   font-size: 15px;
+  font-weight: bold;
   line-height: 20px;
   outline: none;
   padding: 13px 16px;
@@ -77,6 +75,7 @@ footer p{
   white-space: nowrap;
   width: 24%;
   margin-right: 5px;
+  color:#636262;
 }
 
 .minibutton {
@@ -85,7 +84,7 @@ footer p{
 
 .button-19:after {
   background-clip: padding-box;
-  background-color: rgb(24, 47, 0);
+  background-color: rgb(205, 210, 199);
   border: solid transparent;
   border-radius: 16px;
   border-width: 0 0 4px;
