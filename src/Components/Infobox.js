@@ -19,7 +19,8 @@ const InfoboxTitle = styled.h1`
 
 const InfoboxImage = styled.img`
   width: 100%;
-  border-radius: 15px 15px 15px 15px;
+  margin-top: -4px;
+  border-radius: 10px 10px 10px 10px;
   box-shadow: 0.25px 0.25px 1px #808080;
 `;
 

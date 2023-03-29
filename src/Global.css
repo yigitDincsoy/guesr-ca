@@ -24,14 +24,20 @@
 }
 
 .navlink{
-    margin-left:8px;
-    margin-right:8px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
+#navTrending:hover { background-image: linear-gradient( to right, violet, indigo, blue, green, orange, red); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+#navPolitics:hover { color: rgb(194, 210, 244); }
+#navEconomy:hover { color: rgb(247, 194, 153); }
+#navGossip:hover { color:  rgb(221, 195, 245);}
+#navTech:hover { color: rgb(201, 220, 182); }
+
+a:hover { text-decoration: none; }
 
 a{
-  background-color: transparent;
-  text-decoration: none;
+  color: #3c3c3c;
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -136,7 +142,7 @@ footer p{
 }
 
 
-a:hover { text-decoration: none; color: pink}
+
 /* Links css for nav bar and login/logout/Signup
 
 
