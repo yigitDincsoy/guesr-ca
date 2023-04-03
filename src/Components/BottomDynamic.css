@@ -66,22 +66,22 @@ input{
  
 .top:before {
   transform: rotate(45deg);
-  background: #e797d2;
+  background: rgb(194, 210, 244);
 }
 
 .top:after {
   transform: rotate(135deg);
-  background: #c1f7cb;
+  background: rgb(201, 220, 182);
 }
 
 .bottom:before {
   transform: rotate(-45deg);
-  background: #b8eafa;
+  background:  rgb(247, 194, 153);
 }
 
 .bottom:after {
   transform: rotate(-135deg);
-  background: #f9b8d2;
+  background: rgb(221, 195, 245);
 }
 
 .center {
