@@ -13,17 +13,20 @@ function Login() {
   }
 
     return(
+      <div class="container">
+      <div class="top"></div>
+      <div class="bottom"></div>
+      <div class="center"></div>
         <div className="loginform">
             <form>
-            <h3>Login</h3>
-                <label for="email">Email:</label>
+            <h3>login</h3>
+                <label for="email">email:</label>
                 <input type="text" placeholder="Email" required pattern=".*(.com|.net|.org|.ca)$"ref={userRef}></input><br/>
                 <input type="password" placeholder="Password" minlength="4" ref={pwdRef}></input><br/>
-        
-      
-                <button onClick={onAttemptLogin}>Login</button>
+                <button onClick={onAttemptLogin}>login</button>
             </form>
         </div>
+      </div>
     )
 }
 

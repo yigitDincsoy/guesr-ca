@@ -16,14 +16,16 @@ h3
   font-size: 33px;
 }
 
-form{
-
+input{
+  border-radius: 1px;
+  /* border: none; */
 }
 .container {
   position: absolute;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  border-radius: 15px;
 }
 
 .container:hover .top:before,
@@ -61,7 +63,7 @@ form{
   opacity: 0.65;
   transition-delay: 0.2s;
 }
-
+ 
 .top:before {
   transform: rotate(45deg);
   background: #e797d2;
@@ -105,7 +107,7 @@ form{
   width: 100%;
   padding: 15px;
   margin: 5px;
-  border-radius: 1px;
+  border-radius: 15px;
   border: 1px solid #ccc;
   font-family: inherit;
 }
@@ -114,4 +116,31 @@ form{
 .center.visible {
   opacity: 1;
   transform: translate(-50%, -50%);
+}
+
+
+.BI_Wrapper {
+margin-bottom: 20px;
+margin-right: 20px;
+text-align: center;
+backdrop-filter: blur(50px);
+color: #636262;
+display: flex;
+align-items: center;
+flex-direction: column;
+width: 25dvw;
+height: 56dvh;
+position: fixed;
+bottom: 0;
+right: 0;
+border: 1px solid #939799;
+border-radius: 15px;
+font-family: Poppins;
+letter-spacing: -1px;
+}
+
+.BI_Content { 
+display: flex;
+align-items: center;
+flex-direction: column;
 }

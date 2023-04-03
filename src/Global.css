@@ -19,11 +19,16 @@
   font-family: poppins;
   font-weight: bold;
   font-size: 17px;
+  letter-spacing: -.75px;
 }
 
 .navlink {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.navlink:hover {
+  transform: scale(1.08);
 }
 
 #navTrending:hover {
@@ -103,7 +108,7 @@ footer p {
 }
 
 .minibutton {
-  width: 12%;
+  width: 13%;
 }
 
 .buttonTop:after {

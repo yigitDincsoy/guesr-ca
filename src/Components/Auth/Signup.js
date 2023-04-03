@@ -26,24 +26,24 @@ function Signup()
     return(
         <div className="loginform">
             <form>
-                <h3>Sign Up</h3>
-                <label for="email">Email:</label>
-                <input type="text" placeholder="Email" ref={userRef}></input><br />
-                <label  for="password">Password:</label>
-                <input id="password1" type="password" placeholder="Password" ref={pwdRef}></input><br />
-                <label  for="password2">Enter Password Again:</label>
+                <h3>sign up</h3>
+                <label for="email">email:</label>
+                <input type="text" placeholder="email" ref={userRef}></input><br />
+                <label  for="password">password:</label>
+                <input id="password1" type="password" placeholder="password" ref={pwdRef}></input><br />
+                <label  for="password2">enter password again:</label>
                 <input id="password2" type="password"></input><br/>
-                <label for="birthday">Birthday:</label>
+                <label for="birthday">birthday:</label>
                 <input type="date" id="birthday" name="birthday"></input>
 
-                <label for="gender">Gender:</label>
+                <label for="gender">gender:</label>
                 <select id="gender" name="gender">
-                    <option value="female">Female</option>
-                    <option value="male">Male</option>
-                    <option value="non-binary">Non-Binary</option>
-                    <option value="nondisclose">Prefer not to Disclose</option>
+                    <option value="female">female</option>
+                    <option value="male">male</option>
+                    <option value="non-binary">non-binary</option>
+                    <option value="nondisclose">prefer not to Disclose</option>
                 </select><br />
-                <button onClick={checkPasswords}>Sign Up</button>
+                <button onClick={checkPasswords}>sign up</button>
             </form>
         </div>
     )
