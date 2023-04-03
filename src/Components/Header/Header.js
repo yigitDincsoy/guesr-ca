@@ -5,7 +5,7 @@ import { GlobalContext } from "../../App";
 function Header() {
   const localGlobal = useContext(GlobalContext);
 
-  function bottomMenuActivation() {
+  function bottomMenuActivation(arg1) {
     if (localGlobal.bottomUIopen == false) {
       document.getElementById("guessButton").style.borderWidth = "0 0 1px";
       localGlobal.set_bottomUIopen(true);
@@ -20,11 +20,15 @@ function Header() {
   return (
     <header>
       <div className="header_left">
-        <button className="buttonTop">login</button>
+      <button
+          className="buttonTop"
+          id="guessButton"
+          onClick={() => bottomMenuActivation('login')}
+        >login</button>
         <button
           className="buttonTop"
           id="guessButton"
-          onClick={() => bottomMenuActivation()}
+          onClick={() => bottomMenuActivation('register')}
         >sign up</button>
       </div>
       <div className="header_mid">
