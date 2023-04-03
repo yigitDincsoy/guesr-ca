@@ -6,6 +6,7 @@ import Navigation from './Components/Navigation';
 import Footer from './Components/Footer';
 import React, { useState, useEffect } from 'react';
 import BottomInfo from './Components/BottomInfo'
+import BottomDynamic from './Components/BottomDynamic'
 import Login from './Components/Auth/Login'
 import Signup from './Components/Auth/Signup'
 
@@ -50,7 +51,7 @@ function App() {
             <Route path="/login" element={<Login />} />
           </Routes>
           <Footer />
-          { bottomUIopen ? <BottomInfo/>: <></>}
+          { bottomUIopen ? <BottomDynamic/>: <></>}
   
         </GlobalContext.Provider>
       </BrowserRouter>
