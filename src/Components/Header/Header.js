@@ -21,7 +21,11 @@ function Header() {
     <header>
       <div className="header_left">
         <button className="buttonTop">login</button>
-        <button className="buttonTop">sign up</button>
+        <button
+          className="buttonTop"
+          id="guessButton"
+          onClick={() => bottomMenuActivation()}
+        >sign up</button>
       </div>
       <div className="header_mid">
         <h1>guesr</h1>
