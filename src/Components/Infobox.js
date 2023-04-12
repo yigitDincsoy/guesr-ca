@@ -109,11 +109,11 @@ function Infobox(props) {
       </p>{" "}
       <div className="thumbsArea">
         <span className="upVotes">
-          {boxData["totalGuesses"][0]} <i class="icon-thumbs-up"></i>
+          {boxData["totalGuesses"][0]} <i className="icon-thumbs-up"></i>
         </span>
         <span className="downVotes">
           {" "}
-          {boxData["totalGuesses"][1]} <i class="icon-thumbs-down"></i>
+          {boxData["totalGuesses"][1]} <i className="icon-thumbs-down"></i>
         </span>
       </div>
       <InfoboxTitle>{boxData["title"]}</InfoboxTitle>

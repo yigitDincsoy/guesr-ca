@@ -1,35 +1,17 @@
-import React, { useEffect, useContext } from "react";
-import qData from "./FakeData";
-import { GlobalContext } from "../App";
+import React, {useContext } from "react";
 import "./BottomDynamic.css";
 
-function BottomDynamic() {
-  const localGlobal = useContext(GlobalContext);
-
-  let toRender_choosenGuesses = [];
-
-  for (let i = 0; i < localGlobal.userGuessCart.length; i++) {
-    let nextInLine = localGlobal.userGuessCart[i];
-    toRender_choosenGuesses.push(
-      <UNIT_GUESSMADE title={qData[nextInLine]["title"]} />
-    );
-  }
-
-  function UNIT_GUESSMADE(props) {
-    return (
-      <>
-        <p>{props.title}</p>
-      </>
-    );
-  }
+function BottomDynamic(props) {
+  if (props.type=="login") {console.log("Login Selected")}
+  if (props.type=="register") {console.log("Register Selected")}
 
   return (
     <div className="BI_Wrapper">
       <div className="BI_Content">
-        <div class="container">
-          <div class="top"></div>
-          <div class="bottom"></div>
-          <div class="center">
+        <div className="container">
+          <div className="top"></div>
+          <div className="bottom"></div>
+          <div className="center">
             <div>
               <form>
                 <h3>Sign Up</h3>

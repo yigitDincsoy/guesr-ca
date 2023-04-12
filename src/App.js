@@ -51,7 +51,7 @@ function App() {
             <Route path="/login" element={<Login />} />
           </Routes>
           <Footer />
-          { bottomUIopen ? <BottomDynamic/>: <></>}
+          { bottomUIopen ? <BottomDynamic type={"Register"}/>: <></>}
   
         </GlobalContext.Provider>
       </BrowserRouter>
