@@ -21,7 +21,7 @@ function App() {
   const [categoryFilter, set_categoryFilter] = useState("All");
   const [bottomUIopen, set_bottomUIopen] = useState(false);
   const [userGuessCart, set_userGuessCart] = useState([]);
-  const [loggedIn, set_loggedIn] = useState(true);
+  const [loggedIn, set_loggedIn] = useState(false);
 
   return (
     <div className="App">

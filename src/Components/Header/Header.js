@@ -40,6 +40,13 @@ function Header() {
           id="guessButton"
           onClick={() => bottomMenuActivation()}
         >sign up</button>
+
+<button
+          className="buttonTop minibutton"
+          id="guessButton"
+          onClick={() => bottomMenuActivation()}
+        >?</button>
+       
       </div>
     </header>
   );
