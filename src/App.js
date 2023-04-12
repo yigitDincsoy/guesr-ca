@@ -10,6 +10,7 @@ import BottomInfo from './Components/BottomInfo'
 import BottomDynamic from './Components/BottomDynamic'
 import Login from './Components/Auth/Login'
 import Signup from './Components/Auth/Signup'
+import GuessHistory from './Components/GuessHistory/GuessHistory';
 
 
 export const GlobalContext = React.createContext();
@@ -55,6 +56,7 @@ function App() {
             <Route path="/market" element={<Main />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/guessHistory" element={<GuessHistory />} />
           </Routes>
           <Footer />
           { bottomUIopen ? <BottomDynamic type={"Register"}/>: <></>}
