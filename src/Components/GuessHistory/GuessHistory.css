@@ -1,0 +1,18 @@
+#History
+{
+background-color: beige;
+margin-bottom: 10px;
+border: solid 2px black;
+}
+
+#HistoryWrapper
+{
+    background-color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    width: 100%;
+    height: 100dvh;
+}
