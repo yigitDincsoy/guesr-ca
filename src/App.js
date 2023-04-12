@@ -1,6 +1,7 @@
 import './Global.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import Header from './Components/Header/Header'
+import HeaderLogged from './Components/HeaderLogged/HeaderLogged'
 import Main from './Components/Main'
 import Navigation from './Components/Navigation';
 import Footer from './Components/Footer';
@@ -19,7 +20,7 @@ function App() {
   const [categoryFilter, set_categoryFilter] = useState("All");
   const [bottomUIopen, set_bottomUIopen] = useState(false);
   const [userGuessCart, set_userGuessCart] = useState([]);
-
+  const [loggedIn, set_loggedIn] = useState(true);
 
   return (
     <div className="App">
@@ -34,7 +35,11 @@ function App() {
             set_userGuessCart
           }}
         >
-          <Header/>
+
+{loggedIn
+        ? <HeaderLogged />
+        : <Header  />
+      }
           {<Navigation /> }
           <Routes>
      
