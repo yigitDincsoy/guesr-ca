@@ -25,11 +25,7 @@ function Header() {
           id="guessButton"
           onClick={() => bottomMenuActivation()}
         >login</button>
-        <button
-          className="buttonTop"
-          id="guessButton"
-          onClick={() => bottomMenuActivation()}
-        >sign up</button>
+       
       </div>
       <div className="header_mid">
         <h1>guesr</h1>
@@ -39,15 +35,11 @@ function Header() {
       </div>
 
       <div className="header_right">
-        <button
+      <button
           className="buttonTop"
           id="guessButton"
           onClick={() => bottomMenuActivation()}
-        >
-          guesses
-        </button>
-        <button className="buttonTop minibutton">🔔</button>
-        <button className="buttonTop minibutton">...</button>
+        >sign up</button>
       </div>
     </header>
   );

@@ -32,7 +32,8 @@ function App() {
             bottomUIopen,
             set_bottomUIopen,
             userGuessCart, 
-            set_userGuessCart
+            set_userGuessCart,
+            set_loggedIn
           }}
         >
 

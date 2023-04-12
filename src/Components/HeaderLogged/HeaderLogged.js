@@ -20,16 +20,8 @@ function HeaderLogged() {
   return (
     <header>
       <div className="header_left">
-      <button
-          className="buttonTop"
-          id="guessButton"
-          onClick={() => bottomMenuActivation()}
-        >LOGGED IN</button>
-        <button
-          className="buttonTop"
-          id="guessButton"
-          onClick={() => bottomMenuActivation()}
-        >WOAAAAH</button>
+      <h4>Hello, gamer2000</h4>
+      <h4>500 💵</h4>
       </div>
       <div className="header_mid">
         <h1>guesr</h1>
@@ -39,15 +31,8 @@ function HeaderLogged() {
       </div>
 
       <div className="header_right">
-        <button
-          className="buttonTop"
-          id="guessButton"
-          onClick={() => bottomMenuActivation()}
-        >
-          BRO YOU ARE LOGGED IN
-        </button>
-        <button className="buttonTop minibutton">🔔</button>
-        <button className="buttonTop minibutton">...</button>
+        
+        <button className="buttonTop ">📖</button>
       </div>
     </header>
   );
