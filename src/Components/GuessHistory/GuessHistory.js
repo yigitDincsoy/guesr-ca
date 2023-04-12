@@ -6,7 +6,14 @@ function GuessHistory() {
   
 
   return (
-      <p>Hello this is your guess history</p>
+      <div id="HistoryWrapper">
+      <div id="History">gay gay</div>
+      <div id="History">elon musk</div>
+      <div id="History">your previous answer vol 3</div>
+      <div id="History">no IT jobs haha we lost 14 k in tuition</div>
+      <div id="History">yay!!!!! back to minimum wage</div>
+
+      </div>
   );
 }
 

@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer>
-      <p>stealing your time & data for our own profit</p>
+      <div id="Slogan">stealing your time & data for our own profit</div>
       guesr © 2023
     </footer>
   );
