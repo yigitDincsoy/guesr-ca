@@ -23,12 +23,12 @@ function Header() {
       <button
           className="buttonTop"
           id="guessButton"
-          onClick={() => bottomMenuActivation('login')}
+          onClick={() => bottomMenuActivation()}
         >login</button>
         <button
           className="buttonTop"
           id="guessButton"
-          onClick={() => bottomMenuActivation('register')}
+          onClick={() => bottomMenuActivation()}
         >sign up</button>
       </div>
       <div className="header_mid">
