@@ -11,14 +11,7 @@ function Navigation() {
   const [categorySelection, set_categorySelection] = useState("navTrending");
 
   function scr_selectionMade(arg_selection) {
-    //Update the state-variable according to user selection
-    set_categorySelection(arg_selection);
-    //Reset the previous selection to white
-    document.getElementById(categorySelection).style.color = "white";
-    //Set the new variable to blue
-    if (arg_selection != "navTrending") {
-      document.getElementById(arg_selection).style.color = "yellow";
-    }
+
     switch (arg_selection) {
       case "navTrending":
         local_set_categoryFilter("All");
