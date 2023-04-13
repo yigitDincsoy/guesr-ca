@@ -35,17 +35,19 @@ function Header() {
       </div>
 
       <div className="header_right">
+
+      <button
+          className="buttonTop minibutton"
+          id="guessButton"
+          onClick={() => bottomMenuActivation()}
+        >?</button>
       <button
           className="buttonTop"
           id="guessButton"
           onClick={() => bottomMenuActivation()}
         >sign up</button>
 
-<button
-          className="buttonTop minibutton"
-          id="guessButton"
-          onClick={() => bottomMenuActivation()}
-        >?</button>
+
        
       </div>
     </header>
