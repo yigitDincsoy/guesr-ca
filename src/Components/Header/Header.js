@@ -23,7 +23,7 @@ function Header() {
       <button
           className="buttonTop"
           id="guessButton"
-          onClick={() => bottomMenuActivation()}
+          onClick={() => localGlobal.set_loggedIn(true)}
         >login</button>
        
       </div>
