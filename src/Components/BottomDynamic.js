@@ -18,7 +18,7 @@ function BottomDynamic(props) {
           <div className="center">
             <div>
               <form>
-                <h3>Sign Up</h3>
+                <h3>sign up</h3>
                 {/* <label for="email">email:</label> */}
                 <input type="text" placeholder="email"></input>
                 <br />
@@ -33,7 +33,7 @@ function BottomDynamic(props) {
                 <input id="password2" type="password" placeholder="confirm password"></input>
                 <br />
                 <br />
-                <button id="SignUp">Sign Up</button>
+                <button id="SignUp">sign up</button>
               </form>
             </div>
           </div>
