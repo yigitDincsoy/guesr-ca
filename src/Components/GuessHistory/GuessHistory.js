@@ -8,7 +8,9 @@ function GuessHistory() {
   
 
   return (
+   
       <div id="HistoryWrapper">
+      <h1>You can find your previous guesses here.</h1>
       <HistoryInfobox/>
       <HistoryInfobox/>
       <HistoryInfobox/>

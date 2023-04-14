@@ -4,8 +4,12 @@ import "./HistoryInfobox.css";
 
 
 function HistoryInfobox(props) {
-  return (
-    <p>You previously said YES to something</p>
+  return ( 
+    <div className = "HIWrapper">
+    <p>The question was...</p> <p>Will World war III begin?</p>
+    <p>You said YES, with 100 yeetcoins. (Ratio: 2.5)</p>
+    <h4>You LOST.</h4>
+    </div>
   );
 }
 

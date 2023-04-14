@@ -1,10 +1,10 @@
 
 #HistoryWrapper
 {
-    background-color: rgb(148, 183, 148);
+
     display: flex;
     text-align: center;
-    justify-content: center;
+    justify-content: start;
     align-items:center;
     flex-direction: column;
     width: 100%;
