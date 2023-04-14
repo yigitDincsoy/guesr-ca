@@ -13,8 +13,9 @@ function GenericBox(props) {
         <p>Please type an amount: (Max. {props.userMoney})</p>
         <input type="text" />
         <br/>
-        <button type="button">Let's Go!</button>
+        <button type="button">Let's Go!</button><br/>
         <button type="button" onClick={() => {document.getElementById("GenericBox").style.display = "none" }}>Cancel</button>
+        
         </div>
         </div>
 

@@ -6,12 +6,12 @@ right: 0dvw;
 border: 1px solid #939799;
 font-family: Poppins;
 font-weight: Bold;
-width: 30%;
-height: 25dvh;
+width: 24%;
+height: 35dvh;
 }
 
 .genericBox {
-    height: 25dvh;
+    height: 35dvh;
     background-color: blanchedalmond;
     display: flex;
     align-items: center;
