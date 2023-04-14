@@ -11,7 +11,7 @@ import BottomDynamic from './Components/BottomDynamic'
 import Login from './Components/Auth/Login'
 import Signup from './Components/Auth/Signup'
 import GuessHistory from './Components/GuessHistory/GuessHistory';
-
+import GenericBox from './Components/GenericBox/GenericBox';
 
 export const GlobalContext = React.createContext();
 
@@ -40,7 +40,7 @@ function App() {
 
 {loggedIn
         ? <HeaderLogged />
-        : <Header  />
+        : <Header  /> 
       }
           {<Navigation /> }
           <Routes>
@@ -60,8 +60,9 @@ function App() {
           </Routes>
           <Footer />
           { bottomUIopen ? <BottomDynamic type={"Register"}/>: <></>}
-  
+            
         </GlobalContext.Provider>
+        {<GenericBox  questionTitle = "EXAMPLE QUESTION" userAnswer = "EXAMPLE ANSWER" rewardModifier = "EXAMPLE REWARD" userMoney = "EXAMPLE MONEY" /> }
       </BrowserRouter>
     </div>
   );

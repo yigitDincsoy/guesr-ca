@@ -1,0 +1,22 @@
+.genericBoxWrapper {
+display: none;
+position: fixed;
+bottom: 0dvh;
+right: 0dvw;
+border: 1px solid #939799;
+font-family: Poppins;
+font-weight: Bold;
+width: 30%;
+height: 25dvh;
+}
+
+.genericBox {
+    height: 25dvh;
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid black;
+    
+}

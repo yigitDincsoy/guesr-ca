@@ -101,7 +101,7 @@ function Infobox(props) {
   const boxData = props.data;
 
   return (
-    <InfoboxWrapper className={boxData["category"]}>
+    <InfoboxWrapper className={boxData["category"]} onClick={() => {document.getElementById("GenericBox").style.display = "block" }}>
       <InfoboxImage src={"stockphotos/" + boxData["photo"]} />
       <div className="imageText">{boxData["category"]}</div>
       <p id="boxTimer" className="timerArea">
