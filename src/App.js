@@ -62,7 +62,7 @@ function App() {
           { bottomUIopen ? <BottomDynamic type={"Register"}/>: <></>}
             
         </GlobalContext.Provider>
-        {<GenericBox  questionTitle = "EXAMPLE QUESTION" userAnswer = "EXAMPLE ANSWER" rewardModifier = "EXAMPLE REWARD" userMoney = "EXAMPLE MONEY" /> }
+        {<GenericBox  questionTitle = "EXAMPLE QUESTION" userAnswer = "EXAMPLE ANSWER" rewardModifier = "EXAMPLE REWARD" userMoney = "YOUR MONEY" /> }
       </BrowserRouter>
     </div>
   );

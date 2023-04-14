@@ -1,13 +1,7 @@
-#History
-{
-background-color: beige;
-margin-bottom: 10px;
-border: solid 2px black;
-}
 
 #HistoryWrapper
 {
-    background-color: white;
+    background-color: rgb(148, 183, 148);
     display: flex;
     text-align: center;
     justify-content: center;
