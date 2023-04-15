@@ -27,20 +27,9 @@ function BottomDynamic(props)
             <div>
               <form>
                 <h3>sign up</h3>
-                <input type="text" placeholder="username"></input>
-                <input type="text" placeholder="email"></input>
-      
-                <br />
-                <input
-                  id="password1"
-                  type="password"
-                  placeholder="password"
-                ></input>
-                <br />
-              
-                <br />
-                <button id="SignUp">let's go</button>
-                
+                <input id="user" ref={userRef} type="text" placeholder="user"></input><br />
+                <input id="password1" ref={pwdRef} type="password" placeholder="password"></input><br />
+                <button id="SignUp" onClick={onAttemptSignup}>sign up</button>
               </form>
             </div>
           </div>

@@ -11,7 +11,7 @@ import LoginBox from './Components/LoginBox/LoginBox'
 
 import GuessHistory from './Components/GuessHistory/GuessHistory';
 import GenericBox from './Components/GenericBox/GenericBox';
-import { AuthProvider } from './Components/Auth/Auth';
+import { AuthProvider } from './Components/Auth/AuthProvider';
 
 export const GlobalContext = React.createContext();
 

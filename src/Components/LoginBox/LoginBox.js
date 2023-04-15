@@ -49,10 +49,6 @@ function LoginBox(props) {
                 <button onClick= {() => onAttemptLogin}>
                   login
                 </button>
-
-                <button onClick={() => localGlobal.set_loginUIopen(false)}>
-                  cancel
-                </button>
               </form>
             </div>
           </div>
