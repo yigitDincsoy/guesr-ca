@@ -61,7 +61,6 @@ function App() {
           <Footer />
           <AuthProvider>
             { bottomUIopen ? <SignupBox />: <></>}
-            
             { loginUIopen ? <LoginBox/>: <></>}
           </AuthProvider>
 
