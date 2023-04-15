@@ -1,4 +1,4 @@
-import './Global.css';
+import './App.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import Header from './Components/Header/Header'
 import HeaderLogged from './Components/HeaderLogged/HeaderLogged'
@@ -6,12 +6,11 @@ import Main from './Components/Main'
 import Navigation from './Components/Navigation';
 import Footer from './Components/Footer';
 import React, { useState, useEffect } from 'react';
-import BottomInfo from './Components/BottomInfo'
-import BottomDynamic from './Components/BottomDynamic'
+import BottomDynamic from './Components/SignupBox/SignupBox'
 import Login from './Components/Auth/Login'
 import Signup from './Components/Auth/Signup'
 import GuessHistory from './Components/GuessHistory/GuessHistory';
-
+import GenericBox from './Components/GenericBox/GenericBox';
 
 export const GlobalContext = React.createContext();
 
@@ -20,6 +19,7 @@ function App() {
   //Used for filtering content categories
   const [categoryFilter, set_categoryFilter] = useState("All");
   const [bottomUIopen, set_bottomUIopen] = useState(false);
+  const [eventchoosen, set_eventchoosen] = useState(0);
   const [userGuessCart, set_userGuessCart] = useState([]);
   const [loggedIn, set_loggedIn] = useState(false);
 
@@ -40,7 +40,7 @@ function App() {
 
 {loggedIn
         ? <HeaderLogged />
-        : <Header  />
+        : <Header  /> 
       }
           {<Navigation /> }
           <Routes>
@@ -60,8 +60,9 @@ function App() {
           </Routes>
           <Footer />
           { bottomUIopen ? <BottomDynamic type={"Register"}/>: <></>}
-  
+            
         </GlobalContext.Provider>
+        {<GenericBox  questionTitle = "EXAMPLE QUESTION" userAnswer = "EXAMPLE ANSWER" rewardModifier = "EXAMPLE REWARD" userMoney = "YOUR MONEY" /> }
       </BrowserRouter>
     </div>
   );

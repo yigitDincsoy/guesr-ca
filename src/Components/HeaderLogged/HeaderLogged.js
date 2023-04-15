@@ -1,6 +1,8 @@
 import "./HeaderLogged.css";
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../App";
+import { Link } from 'react-router-dom';
+
 
 function HeaderLogged() {
   const localGlobal = useContext(GlobalContext);
@@ -32,7 +34,11 @@ function HeaderLogged() {
 
       <div className="header_right">
         
-        <button className="buttonTop ">📖</button>
+      <Link to="/guessHistory">
+        <button className="buttonTop minibutton" >📖</button>
+        </Link>
+
+        <button className="buttonTop" onClick={() => localGlobal.set_loggedIn(false)}>Logout</button> 
       </div>
     </header>
   );

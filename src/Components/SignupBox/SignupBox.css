@@ -8,22 +8,25 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-h3
-{
-  letter-spacing: -3px;
-  color: #636262;
-  font-weight: bold;
-  font-size: 33px;
+input{
+  border-radius: 1px;
+  border: none;
+  padding-top: 10px;
 }
 
-form{
 
+input::placeholder {
+  font-weight: bold;
+  font-size: 11px;
+  opacity: 0.5;
+  color: #333; 
 }
 .container {
   position: absolute;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  border-radius: 15px;
 }
 
 .container:hover .top:before,
@@ -40,7 +43,7 @@ form{
 .container:hover .center 
 {
   opacity: 1;
-  transition-delay: 0.3s;
+  transition-delay: 0.5s;
 }
 
 .top:before,
@@ -61,7 +64,7 @@ form{
   opacity: 0.65;
   transition-delay: 0.2s;
 }
-
+ 
 .top:before {
   transform: rotate(45deg);
   background: rgb(194, 210, 244);
@@ -104,8 +107,8 @@ form{
 .center input {
   width: 100%;
   padding: 15px;
-  margin: 5px;
-  border-radius: 1px;
+  margin: 4px;
+  border-radius: 4px;
   border: 1px solid #ccc;
   font-family: inherit;
 }
@@ -115,3 +118,37 @@ form{
   opacity: 1;
   transform: translate(-50%, -50%);
 }
+
+
+.BI_Wrapper {
+
+text-align: center;
+background-color: rgba(255, 255, 255, 0.745);
+backdrop-filter: blur(10px);
+display: flex;
+align-items: center;
+flex-direction: column;
+width: 80dvw;
+height: 80dvh;
+position: fixed;
+bottom: 5dvh;
+right: 10dvw;
+border: 1px solid #939799;
+border-radius: 15px;
+font-family: Poppins;
+letter-spacing: -1px;
+}
+
+.BI_Content { 
+width: 50px;
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+
+#SignUp{
+  padding: 6px 40px 6px 40px;
+  border-radius: 4px;
+  border-width: .25px;
+}
+

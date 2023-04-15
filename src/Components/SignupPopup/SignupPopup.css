@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
-*, *:before, *:after {
-  box-sizing: border-box;
-}
 
 body {
   font-family: 'Raleway', sans-serif;
 }
 
-
 input{
   border-radius: 1px;
-  /* border: none; */
+  border: none;
+  padding-top: 10px;
+}
+
+
+input::placeholder {
+  font-weight: bold;
+  font-size: 11px;
+  opacity: 0.5;
+  color: #333; 
 }
 .container {
   position: absolute;
@@ -21,16 +26,6 @@ input{
   border-radius: 15px;
 }
 
-.container:hover .top:before,
-.container:hover .top:after,
-.container:hover .bottom:before,
-.container:hover .bottom:after {
-  margin-left: 200px;
-  transform-origin: -200px 50%;
-  transition-delay: .1s;
-}
-
-
 /* Time for center to appear*/
 .container:hover .center 
 {
@@ -38,44 +33,6 @@ input{
   transition-delay: 0.5s;
 }
 
-.top:before,
-.top:after,
-.bottom:before,
-.bottom:after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 200vmax;
-  height: 200vmax;
-  top: 50%;
-  left: 50%;
-  margin-top: -100vmax;
-  transform-origin: 0 50%;
-  transition: all 0.5s cubic-bezier(0.445, 0.05, 0, 1);
-  z-index: 10;
-  opacity: 0.65;
-  transition-delay: 0.2s;
-}
- 
-.top:before {
-  transform: rotate(45deg);
-  background: rgb(194, 210, 244);
-}
-
-.top:after {
-  transform: rotate(135deg);
-  background: rgb(201, 220, 182);
-}
-
-.bottom:before {
-  transform: rotate(-45deg);
-  background:  rgb(247, 194, 153);
-}
-
-.bottom:after {
-  transform: rotate(-135deg);
-  background: rgb(221, 195, 245);
-}
 
 .center {
   position: absolute;
@@ -99,17 +56,12 @@ input{
 .center input {
   width: 100%;
   padding: 15px;
-  margin: 5px;
-  border-radius: 15px;
+  margin: 4px;
+  border-radius: 4px;
   border: 1px solid #ccc;
   font-family: inherit;
 }
 
-
-.center.visible {
-  opacity: 1;
-  transform: translate(-50%, -50%);
-}
 
 
 .BI_Wrapper {
@@ -137,3 +89,12 @@ display: flex;
 align-items: center;
 flex-direction: column;
 }
+
+#SignUp{
+  padding: 6px 40px 6px 40px;
+  border-radius: 4px;
+  border-width: .25px;
+}
+
+
+
