@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../App";
 
-import Infobox from "./Infobox";
+import Infobox from "./Infobox/Infobox";
 import qData from "./FakeData";
 
 function Main() {
