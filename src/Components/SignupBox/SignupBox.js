@@ -1,13 +1,21 @@
 import React, { useContext } from "react";
+import { useAuth } from "../Auth/AuthProvider";
+import { useRef } from "react";
+
 import "./SignupBox.css";
 
-function BottomDynamic(props) {
-  if (props.type == "login") {
-    console.log("Login Selected");
+function BottomDynamic(props)
+{
+  const authContext = useAuth();
+  const userRef = useRef();
+  const pwdRef = useRef();
+  
+  function onAttemptSignup(e)
+  {
+      e.preventDefault();
+      authContext.signup(userRef.current.value,pwdRef.current.value)
   }
-  if (props.type == "register") {
-    console.log("Register Selected");
-  }
+
 
   return (
     <div className="BI_Wrapper">

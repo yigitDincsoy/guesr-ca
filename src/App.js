@@ -9,8 +9,6 @@ import React, { useState, useEffect } from 'react';
 import SignupBox from './Components/SignupBox/SignupBox'
 import LoginBox from './Components/LoginBox/LoginBox'
 
-import Login from './Components/Auth/Login'
-import Signup from './Components/Auth/Signup'
 import GuessHistory from './Components/GuessHistory/GuessHistory';
 import GenericBox from './Components/GenericBox/GenericBox';
 
@@ -56,8 +54,6 @@ function App() {
             <Route path="/gossip" element={<Main />} />
             <Route path="/tech" element={<Main />} />
             <Route path="/all" element={<Main />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/login" element={<Login />} />
           
             <Route path="/guessHistory" element={<GuessHistory />} />
           </Routes>
