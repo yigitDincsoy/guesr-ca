@@ -19,7 +19,9 @@ function BottomDynamic(props) {
             <div>
               <form>
                 <h3>sign up</h3>
+                <input type="text" placeholder="username"></input>
                 <input type="text" placeholder="email"></input>
+      
                 <br />
                 <input
                   id="password1"
@@ -27,10 +29,9 @@ function BottomDynamic(props) {
                   placeholder="password"
                 ></input>
                 <br />
-                <input id="password2" type="password" placeholder="confirm password"></input>
+              
                 <br />
-                <br />
-                <button id="SignUp">sign up</button>
+                <button id="SignUp">let's go</button>
               </form>
             </div>
           </div>

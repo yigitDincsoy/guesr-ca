@@ -18,8 +18,6 @@ function LoginBox(props) {
                 <input id="username" type="text" placeholder="username"></input>
                 <br />
 
-                <input type="text" placeholder="email"></input>
-                <br />
                 <input
                   id="password1"
                   type="password"
@@ -30,7 +28,7 @@ function LoginBox(props) {
                 <br />
                 <br />
                 <button onClick={() => localGlobal.set_loginUIopen(false)}>
-                  login
+                  let me in
                 </button>
               </form>
             </div>
