@@ -25,12 +25,6 @@ function Navigation() {
       case "navEconomy":
         local_set_categoryFilter("Economy");
         break;
-      // case "navSports":
-      //   local_set_categoryFilter("Sports");
-      //   break;
-      // case "navNews":
-      //   local_set_categoryFilter("News");
-      //   break;
       case "navGossip":
         local_set_categoryFilter("Gossip");
         break;
@@ -66,22 +60,6 @@ function Navigation() {
       >
         economy
       </Link>
-      {/* <Link
-        id="navSports"
-        className="navlink"
-        to="/sports"
-        onClick={() => scr_selectionMade("navSports")}
-      >
-        Sports
-      </Link> */}
-      {/* <Link
-        id="navNews"
-        className="navlink"
-        to="/news"
-        onClick={() => scr_selectionMade("navNews")}
-      >
-        News
-      </Link> */}
       <Link
         id="navGossip"
         className="navlink"
