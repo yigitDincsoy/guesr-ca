@@ -30,6 +30,10 @@ function LoginBox(props) {
                 <button onClick={() => localGlobal.set_loginUIopen(false)}>
                   let me in
                 </button>
+
+                <button onClick={() => localGlobal.set_loginUIopen(false)}>
+                  cancel
+                </button>
               </form>
             </div>
           </div>

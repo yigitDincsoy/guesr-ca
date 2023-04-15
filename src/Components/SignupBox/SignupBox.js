@@ -32,6 +32,7 @@ function BottomDynamic(props) {
               
                 <br />
                 <button id="SignUp">let's go</button>
+                
               </form>
             </div>
           </div>
