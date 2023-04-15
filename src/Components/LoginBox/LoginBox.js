@@ -1,8 +1,21 @@
 import React, { useContext } from "react";
 import "./LoginBox.css";
 import { GlobalContext } from "../../App";
+import { useAuth } from "../Auth/AuthProvider";
+import { useRef } from "react";
+
 
 function LoginBox(props) {
+  const authContex = useAuth();
+  const userRef = useRef();
+  const pwdRef = useRef();
+
+  function onAttemptLogin(e)
+  {
+    e.preventDefault();
+    authContex.signin(userRef.current.value, pwdRef.current.value)
+  }
+
   const localGlobal = useContext(GlobalContext);
   return (
     <div className="BI_Wrapper">
@@ -15,21 +28,25 @@ function LoginBox(props) {
               <form>
                 <h3>login</h3>
 
-                <input id="username" type="text" placeholder="username"></input>
-                <br />
-
-                <input type="text" placeholder="email"></input>
+                <input
+                  id="email"
+                  type="text"
+                  ref={userRef}
+                  placeholder="email"
+                  ></input>
                 <br />
                 <input
                   id="password1"
                   type="password"
+                  ref={pwdRef}
                   placeholder="password"
                 ></input>
                 <br />
 
                 <br />
                 <br />
-                <button onClick={() => localGlobal.set_loginUIopen(false)}>
+                {/*  localGlobal.set_loginUIopen(false) */}
+                <button onClick= {() => onAttemptLogin}>
                   login
                 </button>
               </form>
