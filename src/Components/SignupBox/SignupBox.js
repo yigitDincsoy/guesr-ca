@@ -1,11 +1,20 @@
 import React, { useContext } from "react";
+import { useAuth } from "../Auth/AuthProvider";
 import { useRef } from "react";
 
 import "./SignupBox.css";
 
 function BottomDynamic(props)
 {
-
+  const authContext = useAuth();
+  const userRef = useRef();
+  const pwdRef = useRef();
+  
+  function onAttemptSignup(e)
+  {
+      e.preventDefault();
+      authContext.signup(userRef.current.value,pwdRef.current.value)
+  }
 
 
   return (

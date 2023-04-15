@@ -1,11 +1,20 @@
 import React, { useContext } from "react";
 import "./LoginBox.css";
 import { GlobalContext } from "../../App";
+import { useAuth } from "../Auth/AuthProvider";
 import { useRef } from "react";
 
 
 function LoginBox(props) {
+  const authContex = useAuth();
+  const userRef = useRef();
+  const pwdRef = useRef();
 
+  function onAttemptLogin(e)
+  {
+    e.preventDefault();
+    authContex.signin(userRef.current.value, pwdRef.current.value)
+  }
 
   const localGlobal = useContext(GlobalContext);
   return (
@@ -22,14 +31,14 @@ function LoginBox(props) {
                 <input
                   id="email"
                   type="text"
-      
+                  ref={userRef}
                   placeholder="email"
                   ></input>
                 <br />
                 <input
                   id="password1"
                   type="password"
-
+                  ref={pwdRef}
                   placeholder="password"
                 ></input>
                 <br />
@@ -37,7 +46,7 @@ function LoginBox(props) {
                 <br />
                 <br />
                 {/*  localGlobal.set_loginUIopen(false) */}
-                <button >
+                <button onClick= {() => onAttemptLogin}>
                   login
                 </button>
 
