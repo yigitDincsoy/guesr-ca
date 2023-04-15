@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./BottomDynamic.css";
+import "./SignupBox.css";
 
 function BottomDynamic(props) {
   if (props.type == "login") {

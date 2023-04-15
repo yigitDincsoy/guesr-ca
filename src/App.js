@@ -1,4 +1,4 @@
-import './Global.css';
+import './App.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import Header from './Components/Header/Header'
 import HeaderLogged from './Components/HeaderLogged/HeaderLogged'
@@ -6,7 +6,7 @@ import Main from './Components/Main'
 import Navigation from './Components/Navigation';
 import Footer from './Components/Footer';
 import React, { useState, useEffect } from 'react';
-import BottomDynamic from './Components/BottomDynamic/BottomDynamic'
+import BottomDynamic from './Components/SignupBox/SignupBox'
 import Login from './Components/Auth/Login'
 import Signup from './Components/Auth/Signup'
 import GuessHistory from './Components/GuessHistory/GuessHistory';
