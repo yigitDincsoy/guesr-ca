@@ -6,7 +6,9 @@ import Main from './Components/Main'
 import Navigation from './Components/Navigation';
 import Footer from './Components/Footer';
 import React, { useState, useEffect } from 'react';
-import BottomDynamic from './Components/SignupBox/SignupBox'
+import SignupBox from './Components/SignupBox/SignupBox'
+import LoginBox from './Components/LoginBox/LoginBox'
+
 import Login from './Components/Auth/Login'
 import Signup from './Components/Auth/Signup'
 import GuessHistory from './Components/GuessHistory/GuessHistory';
@@ -18,9 +20,11 @@ export const GlobalContext = React.createContext();
 function App() {
   //Used for filtering content categories
   const [categoryFilter, set_categoryFilter] = useState("All");
+  
   const [bottomUIopen, set_bottomUIopen] = useState(false);
+  const [loginUIopen, set_loginUIopen] = useState(false);
+
   const [eventchoosen, set_eventchoosen] = useState(0);
-  const [userGuessCart, set_userGuessCart] = useState([]);
   const [loggedIn, set_loggedIn] = useState(false);
 
   return (
@@ -32,9 +36,8 @@ function App() {
             set_categoryFilter,
             bottomUIopen,
             set_bottomUIopen,
-            userGuessCart, 
-            set_userGuessCart,
-            set_loggedIn
+            set_loggedIn,
+            set_loginUIopen
           }}
         >
 
@@ -46,21 +49,23 @@ function App() {
           <Routes>
      
             <Route path="/" element={<Main />} />
+          
             <Route path="/politics" element={<Main />} />
             <Route path="/economy" element={<Main />} />
-            {/* <Route path="/sports" element={<Main />} />
-            <Route path="/news" element={<Main />} /> */}
             <Route path="/gossip" element={<Main />} />
             <Route path="/tech" element={<Main />} />
             <Route path="/all" element={<Main />} />
-            <Route path="/market" element={<Main />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
+          
             <Route path="/guessHistory" element={<GuessHistory />} />
           </Routes>
           <Footer />
-          { bottomUIopen ? <BottomDynamic type={"Register"}/>: <></>}
-            
+          { bottomUIopen ? <SignupBox />: <></>}
+          
+          { loginUIopen ? <LoginBox/>: <></>}
+
+
         </GlobalContext.Provider>
         {<GenericBox  questionTitle = "EXAMPLE QUESTION" userAnswer = "EXAMPLE ANSWER" rewardModifier = "EXAMPLE REWARD" userMoney = "YOUR MONEY" /> }
       </BrowserRouter>

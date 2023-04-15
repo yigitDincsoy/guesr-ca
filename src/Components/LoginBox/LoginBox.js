@@ -1,14 +1,9 @@
 import React, { useContext } from "react";
-import "./SignupBox.css";
+import "./LoginBox.css";
+import { GlobalContext } from "../../App";
 
-function BottomDynamic(props) {
-  if (props.type == "login") {
-    console.log("Login Selected");
-  }
-  if (props.type == "register") {
-    console.log("Register Selected");
-  }
-
+function LoginBox(props) {
+  const localGlobal = useContext(GlobalContext);
   return (
     <div className="BI_Wrapper">
       <div className="BI_Content">
@@ -18,7 +13,11 @@ function BottomDynamic(props) {
           <div className="center">
             <div>
               <form>
-                <h3>sign up</h3>
+                <h3>login</h3>
+
+                <input id="username" type="text" placeholder="username"></input>
+                <br />
+
                 <input type="text" placeholder="email"></input>
                 <br />
                 <input
@@ -27,10 +26,12 @@ function BottomDynamic(props) {
                   placeholder="password"
                 ></input>
                 <br />
-                <input id="password2" type="password" placeholder="confirm password"></input>
+
                 <br />
                 <br />
-                <button id="SignUp">sign up</button>
+                <button onClick={() => localGlobal.set_loginUIopen(false)}>
+                  login
+                </button>
               </form>
             </div>
           </div>
@@ -40,4 +41,4 @@ function BottomDynamic(props) {
   );
 }
 
-export default BottomDynamic;
+export default LoginBox;
