@@ -6,7 +6,6 @@ import Main from './Components/Main'
 import Navigation from './Components/Navigation';
 import Footer from './Components/Footer';
 import React, { useState, useEffect } from 'react';
-import BottomInfo from './Components/BottomInfo'
 import BottomDynamic from './Components/BottomDynamic/BottomDynamic'
 import Login from './Components/Auth/Login'
 import Signup from './Components/Auth/Signup'
