@@ -7,7 +7,7 @@ import Navigation from './Components/Navigation';
 import Footer from './Components/Footer';
 import React, { useState, useEffect } from 'react';
 import BottomInfo from './Components/BottomInfo'
-import BottomDynamic from './Components/BottomDynamic'
+import SignupPopup from './Components/SignupPopup/SignupPopup'
 import Login from './Components/Auth/Login'
 import Signup from './Components/Auth/Signup'
 import GuessHistory from './Components/GuessHistory/GuessHistory';
@@ -59,7 +59,7 @@ function App() {
             <Route path="/guessHistory" element={<GuessHistory />} />
           </Routes>
           <Footer />
-          { bottomUIopen ? <BottomDynamic type={"Register"}/>: <></>}
+          { bottomUIopen ? <SignupPopup type={"Register"}/>: <></>}
   
         </GlobalContext.Provider>
       </BrowserRouter>

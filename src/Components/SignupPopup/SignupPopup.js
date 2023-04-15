@@ -1,7 +1,7 @@
 import React, {useContext } from "react";
-import "./BottomDynamic.css";
+import "./SignupPopup.css";
 
-function BottomDynamic(props) {
+function SignupPopup(props) {
   if (props.type=="login") {console.log("Login Selected")}
   if (props.type=="register") {console.log("Register Selected")}
 
@@ -15,6 +15,10 @@ function BottomDynamic(props) {
             <div>
               <form>
                 <h3>Sign Up</h3>
+                <br />
+                <label for="email">Nickname:</label>
+                <input type="text" placeholder="Email"></input>
+                <br />
                 <label for="email">Email:</label>
                 <input type="text" placeholder="Email"></input>
                 <br />
@@ -24,9 +28,7 @@ function BottomDynamic(props) {
                   type="password"
                   placeholder="Password"
                 ></input>
-                <br />
-                <label for="password2">Enter Password Again:</label>
-                <input id="password2" type="password"></input>
+         
                 <br />
                
 
@@ -42,4 +44,4 @@ function BottomDynamic(props) {
   );
 }
 
-export default BottomDynamic;
+export default SignupPopup;

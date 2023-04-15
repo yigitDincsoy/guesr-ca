@@ -73,7 +73,7 @@ const questionData = [
     id:7,
     category: "gossip",
     photo: "war.png",
-    title: "someone is gay",
+    title: "World war III",
     rewardRates: [41.05, 1.01],
     totalGuesses: [123, 532],
     openDate: new Date("2022-01-15"),
