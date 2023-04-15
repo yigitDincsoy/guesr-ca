@@ -24,8 +24,11 @@ function Header() {
       <div className="header_left">
       <button
           className="buttonTop"
-          id="guessButton"
-          onClick={() => localGlobal.set_loggedIn(true)}
+          id="loginButton"
+          onClick={
+      () => localGlobal.set_loginUIopen(true)
+          
+          }
         >login</button>
        
       </div>
