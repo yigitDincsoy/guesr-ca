@@ -6,6 +6,10 @@ import { useRef } from "react";
 
 function LoginBox(props) {
 
+  function loginButtonClicked(e) {
+    localGlobal.set_loggedIn(true)
+    localGlobal.set_loginUIopen(false)
+  }
 
   const localGlobal = useContext(GlobalContext);
   return (
@@ -36,15 +40,16 @@ function LoginBox(props) {
 
                 <br />
                 <br />
+                </form>
                 {/*  localGlobal.set_loginUIopen(false) */}
-                <button >
+                <button onClick={() =>  loginButtonClicked()}>
                   login
                 </button>
 
                 <button onClick={() => localGlobal.set_loginUIopen(false)}>
                   cancel
                 </button>
-              </form>
+            
             </div>
           </div>
         </div>

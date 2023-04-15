@@ -8,15 +8,30 @@ function Header() {
   const localGlobal = useContext(GlobalContext);
 
   function bottomMenuActivation(arg1) {
+
+    
     if (localGlobal.bottomUIopen == false) {
+      localGlobal.set_loginUIopen(false);
       document.getElementById("guessButton").style.borderWidth = "0 0 1px";
       localGlobal.set_bottomUIopen(true);
     } else {
       localGlobal.set_bottomUIopen(false);
       document.getElementById("guessButton").style.borderWidth = "0 0 4px";
     }
+  }
 
-    console.log(localGlobal.bottomUIopen);
+  function loginMenuActivation(arg1) {
+    localGlobal.set_bottomUIopen(false);
+
+    if (localGlobal.loginUIopen == false) {
+      localGlobal.set_loginUIopen(true);
+    } else {
+      localGlobal.set_loginUIopen(false);
+    }
+
+
+  
+  
   }
 
   return (
@@ -26,7 +41,7 @@ function Header() {
           className="buttonTop"
           id="loginButton"
           onClick={
-      () => localGlobal.set_loginUIopen(true)
+      () => loginMenuActivation()
           
           }
         >login</button>
