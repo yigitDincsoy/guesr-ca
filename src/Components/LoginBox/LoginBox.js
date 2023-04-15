@@ -14,6 +14,10 @@ function LoginBox(props) {
             <div>
               <form>
                 <h3>login</h3>
+
+                <input id="username" type="text" placeholder="username"></input>
+                <br />
+
                 <input type="text" placeholder="email"></input>
                 <br />
                 <input
@@ -22,10 +26,12 @@ function LoginBox(props) {
                   placeholder="password"
                 ></input>
                 <br />
+
                 <br />
-                <button 
-                onClick={() => localGlobal.set_loginUIopen(false)}
-                >login</button>
+                <br />
+                <button onClick={() => localGlobal.set_loginUIopen(false)}>
+                  login
+                </button>
               </form>
             </div>
           </div>
