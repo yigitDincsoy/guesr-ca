@@ -28,14 +28,6 @@ header h1
   letter-spacing: -9.6px;
 }
 
-/* header p 
-{
-  font-family: 'poppins';
-  font-size: 1rem;
-  margin: 10px;
-  font-weight: bold;
-} */
-
 .header_left 
 {
   grid-area: header_left;
