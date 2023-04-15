@@ -21,6 +21,7 @@ input::placeholder {
   opacity: 0.5;
   color: #333; 
 }
+
 .container {
   position: absolute;
   width: 100%;
