@@ -25,7 +25,6 @@ function App() {
   const [loginUIopen, set_loginUIopen] = useState(false);
 
   const [eventchoosen, set_eventchoosen] = useState(0);
-  const [userGuessCart, set_userGuessCart] = useState([]);
   const [loggedIn, set_loggedIn] = useState(false);
 
   return (
@@ -37,8 +36,6 @@ function App() {
             set_categoryFilter,
             bottomUIopen,
             set_bottomUIopen,
-            userGuessCart, 
-            set_userGuessCart,
             set_loggedIn,
             set_loginUIopen
           }}
@@ -58,7 +55,6 @@ function App() {
             <Route path="/gossip" element={<Main />} />
             <Route path="/tech" element={<Main />} />
             <Route path="/all" element={<Main />} />
-           
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
           
