@@ -11,6 +11,7 @@ import LoginBox from './Components/LoginBox/LoginBox'
 
 import GuessHistory from './Components/GuessHistory/GuessHistory';
 import GenericBox from './Components/GenericBox/GenericBox';
+import { AuthProvider } from './Components/Auth/Auth';
 
 export const GlobalContext = React.createContext();
 
@@ -58,9 +59,11 @@ function App() {
             <Route path="/guessHistory" element={<GuessHistory />} />
           </Routes>
           <Footer />
-          { bottomUIopen ? <SignupBox />: <></>}
-          
-          { loginUIopen ? <LoginBox/>: <></>}
+          <AuthProvider>
+            { bottomUIopen ? <SignupBox />: <></>}
+            
+            { loginUIopen ? <LoginBox/>: <></>}
+          </AuthProvider>
 
 
         </GlobalContext.Provider>
