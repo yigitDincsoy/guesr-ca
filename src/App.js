@@ -35,6 +35,7 @@ function App() {
             bottomUIopen,
             set_bottomUIopen,
             set_loggedIn,
+            loginUIopen,
             set_loginUIopen
           }}
         >
