@@ -1,0 +1,27 @@
+.genericBoxWrapper {
+position: fixed;
+top: 25%;
+bottom: 25%;
+left: 25%;
+right: 25%;
+/* border: .25px solid #939799; */
+border-width: .25px;
+border-style: solid;
+border-color: rgb(156, 156, 156);
+border-radius: 5px;
+font-family: Poppins;
+font-weight: Bold;
+width: 40%;
+height: 45%;
+}
+
+.genericBox {
+    height: 100%;
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.421);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+}

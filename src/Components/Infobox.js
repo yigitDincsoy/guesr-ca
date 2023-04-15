@@ -3,6 +3,12 @@ import React, { useState, useContext } from "react";
 import { GlobalContext } from "../App";
 import "./Infobox.css";
 
+
+function activateGenericArea() {
+  document.getElementById("GenericBox").style.display = "block" ;
+}
+
+
 //Styled Components
 const InfoboxTitle = styled.h1`
   font-size: 18px;
@@ -101,7 +107,7 @@ function Infobox(props) {
   const boxData = props.data;
 
   return (
-    <InfoboxWrapper className={boxData["category"]}>
+    <InfoboxWrapper className={boxData["category"]} onClick={() => {activateGenericArea()}}>
       <InfoboxImage src={"stockphotos/" + boxData["photo"]} />
       <div className="imageText">{boxData["category"]}</div>
       <p id="boxTimer" className="timerArea">

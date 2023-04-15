@@ -5,10 +5,18 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-
 input{
   border-radius: 1px;
-  /* border: none; */
+  border: none;
+  padding-top: 10px;
+}
+
+
+input::placeholder {
+  font-weight: bold;
+  font-size: 11px;
+  opacity: 0.5;
+  color: #333; 
 }
 .container {
   position: absolute;
@@ -48,8 +56,8 @@ input{
 .center input {
   width: 100%;
   padding: 15px;
-  margin: 5px;
-  border-radius: 15px;
+  margin: 4px;
+  border-radius: 4px;
   border: 1px solid #ccc;
   font-family: inherit;
 }
@@ -81,3 +89,12 @@ display: flex;
 align-items: center;
 flex-direction: column;
 }
+
+#SignUp{
+  padding: 6px 40px 6px 40px;
+  border-radius: 4px;
+  border-width: .25px;
+}
+
+
+

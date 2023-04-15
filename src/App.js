@@ -11,7 +11,7 @@ import SignupPopup from './Components/SignupPopup/SignupPopup'
 import Login from './Components/Auth/Login'
 import Signup from './Components/Auth/Signup'
 import GuessHistory from './Components/GuessHistory/GuessHistory';
-
+import GenericBox from './Components/GenericBox/GenericBox';
 
 export const GlobalContext = React.createContext();
 
@@ -20,6 +20,7 @@ function App() {
   //Used for filtering content categories
   const [categoryFilter, set_categoryFilter] = useState("All");
   const [bottomUIopen, set_bottomUIopen] = useState(false);
+  const [eventchoosen, set_eventchoosen] = useState(0);
   const [userGuessCart, set_userGuessCart] = useState([]);
   const [loggedIn, set_loggedIn] = useState(false);
 
@@ -40,7 +41,7 @@ function App() {
 
 {loggedIn
         ? <HeaderLogged />
-        : <Header  />
+        : <Header  /> 
       }
           {<Navigation /> }
           <Routes>
@@ -59,9 +60,10 @@ function App() {
             <Route path="/guessHistory" element={<GuessHistory />} />
           </Routes>
           <Footer />
-          { bottomUIopen ? <SignupPopup type={"Register"}/>: <></>}
-  
+          { bottomUIopen ? <BottomDynamic type={"Register"}/>: <></>}
+            
         </GlobalContext.Provider>
+        {<GenericBox  questionTitle = "EXAMPLE QUESTION" userAnswer = "EXAMPLE ANSWER" rewardModifier = "EXAMPLE REWARD" userMoney = "YOUR MONEY" /> }
       </BrowserRouter>
     </div>
   );
