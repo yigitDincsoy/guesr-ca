@@ -11,7 +11,7 @@ import LoginBox from './Components/LoginBox/LoginBox'
 
 import GuessHistory from './Components/GuessHistory/GuessHistory';
 import GenericBox from './Components/GenericBox/GenericBox';
-import { AuthProvider } from './Components/Auth/AuthProvider';
+import { AuthProvider, useAuth } from './Components/Auth/AuthProvider';
 
 export const GlobalContext = React.createContext();
 
@@ -24,7 +24,8 @@ function App() {
   const [loginUIopen, set_loginUIopen] = useState(false);
 
   const [eventchoosen, set_eventchoosen] = useState(0);
-  const [loggedIn, set_loggedIn] = useState(false);
+  
+  const loginInfo = useAuth()
 
   const [serverData_question, set_serverData_question] = useState(null);
 
@@ -44,14 +45,13 @@ function App() {
             set_categoryFilter,
             bottomUIopen,
             set_bottomUIopen,
-            set_loggedIn,
             loginUIopen,
             set_loginUIopen,
             serverData_question
           }}
         >
 
-{loggedIn
+{(loginInfo.currentUser)
         ? <HeaderLogged />
         : <Header  /> 
       }

@@ -50,7 +50,7 @@ function LoginBox(props) {
                 <br />
                 <br />
                 </form>
-                <button onClick= {() => onAttemptLogin}>
+                <button onClick= {onAttemptLogin}>
                   login
                 </button>
 

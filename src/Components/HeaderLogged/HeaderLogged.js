@@ -2,10 +2,12 @@ import "./HeaderLogged.css";
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../App";
 import { Link } from 'react-router-dom';
+import { useAuth } from "../Auth/AuthProvider";
 
 
 function HeaderLogged() {
   const localGlobal = useContext(GlobalContext);
+  const loginInfo = useAuth;
 
   function bottomMenuActivation(arg1) {
     if (localGlobal.bottomUIopen == false) {
@@ -22,7 +24,7 @@ function HeaderLogged() {
   return (
     <header>
       <div className="header_left">
-      <h4>Hello, gamer2000</h4>
+      <h4>{loginInfo.currentUser}</h4>
       <h4>500 💵</h4>
       </div>
       <div className="header_mid">
@@ -35,7 +37,7 @@ function HeaderLogged() {
         <button className="buttonTop minibutton" >📖</button>
         </Link>
 
-        <button className="buttonTop" onClick={() => localGlobal.set_loggedIn(false)}>Logout</button> 
+        <button className="buttonTop" onClick={() => loginInfo.signout()}>Logout</button> 
       </div>
     </header>
   );
