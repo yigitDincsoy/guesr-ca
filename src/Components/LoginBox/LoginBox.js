@@ -10,10 +10,10 @@ function LoginBox(props) {
   const userRef = useRef();
   const pwdRef = useRef();
 
-  function loginButtonClicked(e) {
-    localGlobal.set_loggedIn(true)
-    localGlobal.set_loginUIopen(false)
-  }
+  // function loginButtonClicked(e) {
+  //   localGlobal.set_loggedIn(true)
+  //   localGlobal.set_loginUIopen(false)
+  // }
   function onAttemptLogin(e)
   {
     e.preventDefault();
@@ -50,11 +50,10 @@ function LoginBox(props) {
                 <br />
                 <br />
                 </form>
-                {/*  localGlobal.set_loginUIopen(false) */}
                 <button onClick= {() => onAttemptLogin}>
                   login
                 </button>
-              </form>
+
             </div>
           </div>
         </div>
