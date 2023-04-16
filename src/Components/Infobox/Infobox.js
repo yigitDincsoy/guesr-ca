@@ -5,23 +5,10 @@ import "./Infobox.css";
 
 
 function activateGenericArea() {
-  document.getElementById("GenericBox").style.display = "block" ;
+  document.getElementById("GenericBox").style.display = "block";
 }
 
-function calculatePayout()
-{
-  const totalVotes = 0;
-  const payout = []
-  for (let votes of boxData["votes"])
-  {
-    totalVotes += votes
-  }
-  for (let votes of boxData["votes"])
-  {
-    payout.push(totalVotes/votes)
-  }
-  return payout
-}
+
 
 
 //Styled Components
@@ -121,16 +108,29 @@ function Infobox(props) {
   const localGlobal = useContext(GlobalContext);
   const boxData = props.data;
 
+  const payout = calculatePayout();
+
   const date = new Date(boxData["closeDate"]);
-  const options = {  year: 'numeric', month: 'long', day: 'numeric' };
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
   const readableDate = date.toLocaleDateString("en-US", options);
+  function calculatePayout() {
+    let totalVotes = 0;
+    const payout = []
+    for (let votes of boxData["votes"]) {
+      totalVotes += votes
+    }
+    for (let votes of boxData["votes"]) {
+      payout.push(totalVotes / votes)
+    }
+    return payout
+  }
 
   return (
-    <InfoboxWrapper className={boxData["category"]} onClick={() => {activateGenericArea()}}>
+    <InfoboxWrapper className={boxData["category"]} onClick={() => { activateGenericArea() }}>
       <InfoboxImage src={"stockphotos/" + boxData["photo"]} />
       <div className="imageText">{boxData["category"]}</div>
       <p id="boxTimer" className="timerArea">
-      🕒{readableDate}
+        🕒{readableDate}
       </p>{" "}
       <div className="thumbsArea">
         <span className="upVotes">
@@ -144,9 +144,9 @@ function Infobox(props) {
       <InfoboxTitle>{boxData["title"]}</InfoboxTitle>
       <InfoboxButtonArea>
         <InfoboxButton onClick={() => boxSelected()}>
-          yes (rate)
+          yes ({payout[0].toFixed(3)})
         </InfoboxButton>
-        <InfoboxButton>no (rate)</InfoboxButton>
+        <InfoboxButton>no ({payout[1].toFixed(3)})</InfoboxButton>
       </InfoboxButtonArea>
     </InfoboxWrapper>
   );
