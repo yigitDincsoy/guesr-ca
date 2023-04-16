@@ -3,10 +3,13 @@ import { GlobalContext } from "../../App";
 import "./GenericBox.css";
 
 function GenericBox(props) {
+
+  
   return (
     <div className="genericBoxWrapper" id="GenericBox">
         <div className="genericBox">
         <h4>🍀 Please Confirm! 🍀</h4>
+
         <p>Q: {props.questionTitle}</p>
         <p>You are saying {props.userAnswer}</p>
         <p>Reward modifier is {props.rewardModifier}</p>

@@ -19,7 +19,7 @@ function Main() {
   let toRender_boxes = [];
   for (let i = 0; i < filtered_qData.length; i++) {
      toRender_boxes.push(
-   <Infobox className="Infobox" data={filtered_qData[i]} />
+   <Infobox className="Infobox" data={filtered_qData[i]}  localID={i}/>
     );
   }
 
