@@ -8,6 +8,21 @@ function activateGenericArea() {
   document.getElementById("GenericBox").style.display = "block" ;
 }
 
+function calculatePayout()
+{
+  const totalVotes = 0;
+  const payout = []
+  for (let votes of boxData["votes"])
+  {
+    totalVotes += votes
+  }
+  for (let votes of boxData["votes"])
+  {
+    payout.push(totalVotes/votes)
+  }
+  return payout
+}
+
 
 //Styled Components
 const InfoboxTitle = styled.h1`
