@@ -27,9 +27,6 @@ function HeaderLogged() {
       </div>
       <div className="header_mid">
         <h1>guesr</h1>
-        {/* <p>
-          we steal your time & data for our own profit, since 2023
-        </p> */}
       </div>
 
       <div className="header_right">

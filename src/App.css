@@ -115,7 +115,7 @@ footer #Slogan {
   background-clip: padding-box;
   background-color: rgb(205, 210, 199);
   border: solid transparent;
-  border-radius: 16px;
+  border-radius: 15px;
   border-width: 0 0 4px;
   bottom: -4px;
   content: "";
@@ -131,10 +131,6 @@ footer #Slogan {
   user-select: auto;
 }
 
-/* .buttonTop:hover:not(:disabled) {
-  filter: brightness(1.1);
-  -webkit-filter: brightness(1.1);
-} */
 
 .buttonTop:disabled {
   cursor: auto;

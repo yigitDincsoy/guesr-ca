@@ -11,11 +11,12 @@ function GenericBox(props) {
         <p>You are saying {props.userAnswer}</p>
         <p>Reward modifier is {props.rewardModifier}</p>
         <p>Please type an amount: (Max. {props.userMoney})</p>
-        <input type="text" />
+        <input id="text" type="text" placeholder="enter amount"/>
         <br/>
-        <button type="button">Let's Go!</button><br/>
-        <button type="button" onClick={() => {document.getElementById("GenericBox").style.display = "none" }}>Cancel</button>
-        
+        <div className="buttonContainer">
+        <button className="letsGo" type="button">Let's Go!</button>
+        <button className="cancel" type="button" onClick={() => {document.getElementById("GenericBox").style.display = "none" }}>Cancel</button>
+        </div>
         </div>
         </div>
 
