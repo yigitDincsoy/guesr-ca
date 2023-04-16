@@ -9,9 +9,9 @@ const Question = new Schema(
         votes: {type: [Number], required:true},
         openDate: { type: Date, required: true},
         closeDate: { type: Date, required: true},
-        cost: {type: Number, required: true},
-        photo: {data: Buffer, contentType: String},
-        description: {type: String, required: true},
+        cost: {type: Number},
+        photo: { type: String, required: true},
+        description: {type: String},
     }
 )
 
