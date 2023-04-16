@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 const User = new Schema(
     {
+        email: { type: String, required: true},
         username: { type: String, required: true},
         yeets: {type: Number, required: true},
         items: {type: [mongoose.SchemaTypes.ObjectId]},

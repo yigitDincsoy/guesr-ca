@@ -26,7 +26,7 @@ function App() {
   const [eventchoosen, set_eventchoosen] = useState(0);
   
   const loginInfo = useAuth()
-
+  console.log(loginInfo.currentUser)
   const [serverData_question, set_serverData_question] = useState(null);
 
   useEffect(() => {

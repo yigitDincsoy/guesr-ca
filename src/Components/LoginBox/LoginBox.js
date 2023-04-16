@@ -14,10 +14,15 @@ function LoginBox(props) {
   //   localGlobal.set_loggedIn(true)
   //   localGlobal.set_loginUIopen(false)
   // }
-  function onAttemptLogin(e)
-  {
+  function onAttemptLogin(e) {
     e.preventDefault();
     authContex.signin(userRef.current.value, pwdRef.current.value)
+    //wait until we get a response
+    //check if login worked
+    //if it did, then we create do a get from mongodb
+    //the id for that user should be currentuser.uid
+    //then we have all the data we want
+    //
   }
 
   const localGlobal = useContext(GlobalContext);
@@ -37,7 +42,7 @@ function LoginBox(props) {
                   type="text"
                   ref={userRef}
                   placeholder="email"
-                  ></input>
+                ></input>
                 <br />
                 <input
                   id="password1"
@@ -49,10 +54,11 @@ function LoginBox(props) {
 
                 <br />
                 <br />
-                </form>
-                <button onClick= {onAttemptLogin}>
-                  login
-                </button>
+              </form>
+              <button onClick={onAttemptLogin}>
+                login
+                {authContex.currentUser.email}
+              </button>
 
             </div>
           </div>

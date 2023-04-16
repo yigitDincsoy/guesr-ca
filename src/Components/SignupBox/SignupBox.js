@@ -14,6 +14,12 @@ function BottomDynamic(props)
   {
       e.preventDefault();
       authContext.signup(userRef.current.value,pwdRef.current.value)
+      //wait until we get a response
+      //check if signup worked
+      //if it did, then we create a user on mongo db
+      //the id for thet user should be currentuser.uid
+      //everything else we already have
+      //
   }
 
 
