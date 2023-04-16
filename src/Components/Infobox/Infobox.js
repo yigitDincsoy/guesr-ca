@@ -8,9 +8,6 @@ function activateGenericArea() {
   document.getElementById("GenericBox").style.display = "block";
 }
 
-
-
-
 //Styled Components
 const InfoboxTitle = styled.h1`
   font-size: 18px;
@@ -99,6 +96,7 @@ const InfoboxWrapper = styled.section`
 `;
 
 function Infobox(props) {
+
   function boxSelected() {
     // const previousArray = localGlobal.userGuessCart;
     // previousArray.push(boxData["id"]);
@@ -126,7 +124,7 @@ function Infobox(props) {
   }
 
   return (
-    <InfoboxWrapper className={boxData["category"]} onClick={() => { activateGenericArea() }}>
+    <InfoboxWrapper className={boxData["category"]} onClick={() => { localGlobal.set_eventchoosen(props.localID); activateGenericArea() }}>
       <InfoboxImage src={"stockphotos/" + boxData["photo"]} />
       <div className="imageText">{boxData["category"]}</div>
       <p id="boxTimer" className="timerArea">
@@ -144,9 +142,9 @@ function Infobox(props) {
       <InfoboxTitle>{boxData["title"]}</InfoboxTitle>
       <InfoboxButtonArea>
         <InfoboxButton onClick={() => boxSelected()}>
-          yes ({payout[0].toFixed(3)})
+          yes ({payout[0].toFixed(2)})
         </InfoboxButton>
-        <InfoboxButton>no ({payout[1].toFixed(3)})</InfoboxButton>
+        <InfoboxButton>no ({payout[1].toFixed(2)})</InfoboxButton>
       </InfoboxButtonArea>
     </InfoboxWrapper>
   );

@@ -47,7 +47,9 @@ function App() {
             set_bottomUIopen,
             loginUIopen,
             set_loginUIopen,
-            serverData_question
+            serverData_question,
+            eventchoosen,
+            set_eventchoosen
           }}
         >
 
