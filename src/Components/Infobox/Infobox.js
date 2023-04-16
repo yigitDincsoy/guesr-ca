@@ -144,9 +144,9 @@ function Infobox(props) {
       <InfoboxTitle>{boxData["title"]}</InfoboxTitle>
       <InfoboxButtonArea>
         <InfoboxButton onClick={() => boxSelected()}>
-          yes ({payout[0].toFixed(3)})
+          yes ({payout[0].toFixed(2)})
         </InfoboxButton>
-        <InfoboxButton>no ({payout[1].toFixed(3)})</InfoboxButton>
+        <InfoboxButton>no ({payout[1].toFixed(2)})</InfoboxButton>
       </InfoboxButtonArea>
     </InfoboxWrapper>
   );
