@@ -26,6 +26,15 @@ function App() {
   const [eventchoosen, set_eventchoosen] = useState(0);
   const [loggedIn, set_loggedIn] = useState(false);
 
+  const [serverData_question, set_serverData_question] = useState(null);
+
+  useEffect(() => {
+      fetch("http://localhost:3000/api/questions")
+       .then(res => {return res.json()})
+       .then(data => {
+        set_serverData_question(data);
+      })}, [])
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -37,7 +46,8 @@ function App() {
             set_bottomUIopen,
             set_loggedIn,
             loginUIopen,
-            set_loginUIopen
+            set_loginUIopen,
+            serverData_question
           }}
         >
 
@@ -45,11 +55,15 @@ function App() {
         ? <HeaderLogged />
         : <Header  /> 
       }
+
+
           {<Navigation /> }
+         
+         
+          {serverData_question
+        ?
           <Routes>
-     
             <Route path="/" element={<Main />} />
-          
             <Route path="/politics" element={<Main />} />
             <Route path="/economy" element={<Main />} />
             <Route path="/gossip" element={<Main />} />
@@ -57,11 +71,16 @@ function App() {
             <Route path="/all" element={<Main />} />
           
             <Route path="/guessHistory" element={<GuessHistory />} />
-          </Routes>
+          </Routes> : <></> }
+
+
+          
           <Footer />
           <AuthProvider>
             { bottomUIopen ? <SignupBox />: <></>}
             { loginUIopen ? <LoginBox/>: <></>}
+
+        
           </AuthProvider>
 
 

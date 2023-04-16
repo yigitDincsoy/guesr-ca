@@ -98,36 +98,40 @@ const InfoboxWrapper = styled.section`
 
 function Infobox(props) {
   function boxSelected() {
-    const previousArray = localGlobal.userGuessCart;
-    previousArray.push(boxData["id"]);
-    localGlobal.set_userGuessCart(previousArray);
+    // const previousArray = localGlobal.userGuessCart;
+    // previousArray.push(boxData["id"]);
+    // localGlobal.set_userGuessCart(previousArray);
   }
 
   const localGlobal = useContext(GlobalContext);
   const boxData = props.data;
+
+  const date = new Date(boxData["closeDate"]);
+  const options = {  year: 'numeric', month: 'long', day: 'numeric' };
+  const readableDate = date.toLocaleDateString("en-US", options);
 
   return (
     <InfoboxWrapper className={boxData["category"]} onClick={() => {activateGenericArea()}}>
       <InfoboxImage src={"stockphotos/" + boxData["photo"]} />
       <div className="imageText">{boxData["category"]}</div>
       <p id="boxTimer" className="timerArea">
-        5d 59m 50s
+      🕒{readableDate}
       </p>{" "}
       <div className="thumbsArea">
         <span className="upVotes">
-          {boxData["totalGuesses"][0]} <i className="icon-thumbs-up"></i>
+          {boxData["votes"][0]} <i className="icon-thumbs-up"></i>
         </span>
         <span className="downVotes">
           {" "}
-          {boxData["totalGuesses"][1]} <i className="icon-thumbs-down"></i>
+          {boxData["votes"][1]} <i className="icon-thumbs-down"></i>
         </span>
       </div>
       <InfoboxTitle>{boxData["title"]}</InfoboxTitle>
       <InfoboxButtonArea>
         <InfoboxButton onClick={() => boxSelected()}>
-          yes ({boxData["rewardRates"][0]})
+          yes (rate)
         </InfoboxButton>
-        <InfoboxButton>no ({boxData["rewardRates"][1]})</InfoboxButton>
+        <InfoboxButton>no (rate)</InfoboxButton>
       </InfoboxButtonArea>
     </InfoboxWrapper>
   );
