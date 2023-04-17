@@ -14,22 +14,22 @@ function Navigation() {
 
     switch (arg_selection) {
       case "navTrending":
-        local_set_categoryFilter("All");
+        local_set_categoryFilter("all");
         break;
       case "navAll":
-        local_set_categoryFilter("All");
+        local_set_categoryFilter("all");
         break;
       case "navPolitics":
-        local_set_categoryFilter("Politics");
+        local_set_categoryFilter("politics");
         break;
       case "navEconomy":
-        local_set_categoryFilter("Economy");
+        local_set_categoryFilter("economy");
         break;
       case "navGossip":
-        local_set_categoryFilter("Gossip");
+        local_set_categoryFilter("gossip");
         break;
       case "navTech":
-        local_set_categoryFilter("Tech");
+        local_set_categoryFilter("tech");
         break;
     }
   }
@@ -76,14 +76,7 @@ function Navigation() {
       >
         tech
       </Link>
-      <Link
-        id="navAll"
-        className="navlink"
-        to="/all"
-        onClick={() => scr_selectionMade("navAll")}
-      >
-        all
-      </Link>
+  
     </div>
   );
 }

@@ -18,14 +18,15 @@ export const GlobalContext = React.createContext();
 
 function App() {
   //Used for filtering content categories
-  const [categoryFilter, set_categoryFilter] = useState("All");
+  const [categoryFilter, set_categoryFilter] = useState("all");
   
   const [bottomUIopen, set_bottomUIopen] = useState(false);
   const [loginUIopen, set_loginUIopen] = useState(false);
 
+  const [userLoggedIn, set_userLoggedIn] = useState(false);
   const [eventchoosen, set_eventchoosen] = useState([0,0]);
-  
-  const loginInfo = useAuth()
+
+   const loginInfo = useAuth()
   const [serverData_question, set_serverData_question] = useState(null);
 
   useEffect(() => {
@@ -49,11 +50,14 @@ function App() {
             set_loginUIopen,
             serverData_question,
             eventchoosen,
-            set_eventchoosen
+            set_eventchoosen,
+            userLoggedIn,
+            set_userLoggedIn
           }}
         >
 
-{loginInfo.currentUser
+
+{userLoggedIn
         ? <HeaderLogged />
         : <Header  /> 
       }
@@ -81,7 +85,13 @@ function App() {
           <AuthProvider>
             { bottomUIopen ? <SignupBox />: <></>}
             { loginUIopen ? <LoginBox/>: <></>}
-
+          
+            { 
+            loginInfo.currentuser ? 
+            <>{loginInfo.currentuser}</>:
+            <></>
+          
+          }
         
           </AuthProvider>
 
@@ -92,6 +102,7 @@ function App() {
 
         </GlobalContext.Provider>
        
+            
       </BrowserRouter>
     </div>
   );

@@ -6,6 +6,7 @@ import { useRef } from "react";
 
 
 function LoginBox(props) {
+  const localGlobal = useContext(GlobalContext);
   const authContex = useAuth();
   const userRef = useRef();
   const pwdRef = useRef();
@@ -16,7 +17,9 @@ function LoginBox(props) {
   // }
   function onAttemptLogin(e) {
     e.preventDefault();
-    authContex.signin(userRef.current.value, pwdRef.current.value)
+    localGlobal.set_loginUIopen(false);
+    let myValue = authContex.signin(userRef.current.value, pwdRef.current.value)
+    localGlobal.set_userLoggedIn(authContex.currentUser.email)
     //wait until we get a response
     //check if login worked
     //if it did, then we create do a get from mongodb
@@ -25,7 +28,7 @@ function LoginBox(props) {
     //
   }
 
-  const localGlobal = useContext(GlobalContext);
+
   return (
     <div className="BI_Wrapper">
       <div className="BI_Content">

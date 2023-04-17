@@ -18,7 +18,7 @@
 
   .genericBox {
     height: 100%;
-    backdrop-filter: blur(17px);
+    backdrop-filter: blur(15px);
     background-color: rgba(255, 255, 255, 0.267);
     border-radius: 5px;
     display: flex;
@@ -26,6 +26,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: larger;
   }
 
   .buttonContainer{

@@ -32,7 +32,8 @@ export function AuthProvider({children})
 
     function signup(usr,pwd)
     {
-        createUserWithEmailAndPassword(auth,usr,pwd);
+       createUserWithEmailAndPassword(auth,usr,pwd);
+        
     }
 
     useEffect(()=>{
