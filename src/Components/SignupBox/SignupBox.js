@@ -16,9 +16,9 @@ function BottomDynamic(props)
   {
 
       e.preventDefault();
-      authContext.signup(userRef.current.value,pwdRef.current.value)
       localGlobal.set_bottomUIopen(false); 
-      localGlobal.set_userLoggedIn(false); 
+      let myValue = authContext.signup(userRef.current.value,pwdRef.current.value)
+      localGlobal.set_userLoggedIn(authContext.currentUser.email)
       //wait until we get a response
       //check if signup worked
       //if it did, then we create a user on mongo db

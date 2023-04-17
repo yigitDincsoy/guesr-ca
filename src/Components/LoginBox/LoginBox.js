@@ -19,6 +19,7 @@ function LoginBox(props) {
     e.preventDefault();
     localGlobal.set_loginUIopen(false);
     let myValue = authContex.signin(userRef.current.value, pwdRef.current.value)
+    console.log(authContex.currentUser)
     localGlobal.set_userLoggedIn(authContex.currentUser.email)
     //wait until we get a response
     //check if login worked
@@ -60,7 +61,7 @@ function LoginBox(props) {
               </form>
               <button onClick={onAttemptLogin}>
                 login
-                {authContex.currentUser.email}
+                {/* {authContex.currentUser.email} */}
               </button>
 
             </div>

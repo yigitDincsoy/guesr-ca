@@ -1,12 +1,17 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../App";
-
 import Infobox from "./Infobox/Infobox";
+import { useAuth } from "./Auth/AuthProvider";
+
+
 
 function Main() {
-  const localGlobal = useContext(GlobalContext);
-  const localServerData = localGlobal.serverData_question.data;
+ 
 
+  const localGlobal = useContext(GlobalContext);
+
+
+  const localServerData = localGlobal.serverData_question.data;
 
   //Filter the data according to the user selection and create a new, smaller question array to be used for rendering
   let categoryFilter = localGlobal.categoryFilter;
@@ -38,7 +43,11 @@ function Main() {
  
 
   return (
+  <>
   <div className="mainArea">{toRender_boxes}</div>
+ 
+
+  </>
   );
 }
 
