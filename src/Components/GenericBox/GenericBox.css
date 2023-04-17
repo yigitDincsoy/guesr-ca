@@ -1,0 +1,73 @@
+
+.genericBoxWrapper {
+    border-width: .25px;
+    border-style: solid;
+    border-color: rgb(205, 202, 202);
+    border-radius: 5px;
+    box-shadow: 6px 6px 7px rgba(76, 75, 75, 0.288);
+    font-family: Poppins;
+    font-weight: Bold;
+    width: 40%;
+    height: 55%;
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .genericBox {
+    height: 100%;
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.267);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: larger;
+  }
+
+  .buttonContainer{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .letsGo, .cancel {
+    border-style: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    margin-right: 10px;
+    width: 100px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 6px 6px 7px rgba(76, 75, 75, 0.158);
+    transition: transform 0.2s ease-in-out;
+    font-family: inherit;
+    font-weight:bold;
+}
+  
+  .letsGo:active, .cancel:active {
+    transform: translateY(2px);
+  }
+  
+  input{
+  margin: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  }
+  
+  
+  input::placeholder {
+    font-weight: bold;
+    font-size: 12px;
+    opacity: 0.5;
+    color: #333; 
+  }
+
+ 
+
+  

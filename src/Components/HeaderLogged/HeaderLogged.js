@@ -1,78 +1,49 @@
-import "./Header.css";
+import "./HeaderLogged.css";
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../App";
 import { Link } from 'react-router-dom';
+import { useAuth } from "../Auth/AuthProvider";
 
 
-function Header() {
+function HeaderLogged() {
   const localGlobal = useContext(GlobalContext);
+  const loginInfo = useAuth;
 
   function bottomMenuActivation(arg1) {
-
-    
     if (localGlobal.bottomUIopen == false) {
-      localGlobal.set_loginUIopen(false);
       document.getElementById("guessButton").style.borderWidth = "0 0 1px";
       localGlobal.set_bottomUIopen(true);
     } else {
       localGlobal.set_bottomUIopen(false);
       document.getElementById("guessButton").style.borderWidth = "0 0 4px";
     }
-  }
-
-  function loginMenuActivation(arg1) {
-    localGlobal.set_bottomUIopen(false);
-
-    if (localGlobal.loginUIopen == false) {
-      localGlobal.set_loginUIopen(true);
-    } else {
-      localGlobal.set_loginUIopen(false);
-    }
 
 
-  
-  
   }
 
   return (
     <header>
       <div className="header_left">
-      <button
-          className="buttonTop"
-          id="loginButton"
-          onClick={
-      () => loginMenuActivation()
-          
-          }
-        >login</button>
-       
+      <h4>{localGlobal.userLoggedIn}</h4>
+      <h4>500 💵</h4>
       </div>
       <div className="header_mid">
-  
         <h1>guesr</h1>
-
-        {/* <p>
-          we steal your time & data for our own profit, since 2023
-        </p> */}
       </div>
 
       <div className="header_right">
+    
+      <Link to="/guessHistory">
+        <button className="buttonTop minibutton" >📖</button>
+        </Link>
 
-     
-      <button
-          className="buttonTop"
-          id="guessButton"
-          onClick={() => bottomMenuActivation()}
-        >sign up</button>
-
-
-       
+        <button className="buttonTop" onClick={() => localGlobal.set_userLoggedIn(false)}>Logout</button> 
       </div>
     </header>
   );
 }
 
-export default Header;
+export default HeaderLogged;
 
 //640 360
 

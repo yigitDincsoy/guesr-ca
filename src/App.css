@@ -1,0 +1,160 @@
+.App {
+  font-family: "Roboto";
+  background-color: #ebebeb;
+}
+
+.mainArea {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  color: #636262;
+  font-family: poppins;
+  font-weight: bold;
+  font-size: 17px;
+  letter-spacing: -.75px;
+}
+
+.navlink {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.navlink:hover {
+  transform: scale(1.08);
+}
+
+#navTrending:hover {
+  background-image: linear-gradient(
+    to right,
+    violet,
+    indigo,
+    blue,
+    green,
+    orange,
+    red
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#navPolitics:hover {
+  color: rgb(194, 210, 244);
+}
+#navEconomy:hover {
+  color: rgb(247, 194, 153);
+}
+#navGossip:hover {
+  color: rgb(221, 195, 245);
+}
+#navTech:hover {
+  color: rgb(201, 220, 182);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a {
+  color: #3c3c3c;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+footer {
+  padding: 40px;
+  font-family: "Poppins";
+  text-align: center;
+  color: #636262;
+  font-size: 13px;
+}
+
+footer #Slogan {
+  font-style: italic;
+  font-size: 10px;
+}
+
+.buttonTop {
+  appearance: button;
+  font-family: poppins;
+  border: solid transparent;
+  border-radius: 15px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 20px;
+  outline: none;
+  padding: 13px 16px;
+  text-align: center;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 24%;
+  margin-right: 5px;
+  color: #636262;
+}
+
+.minibutton {
+  width: 13%;
+}
+
+.buttonTop:after {
+  background-clip: padding-box;
+  background-color: rgb(205, 210, 199);
+  border: solid transparent;
+  border-radius: 15px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.buttonTop:main,
+.buttonTop:focus {
+  user-select: auto;
+}
+
+
+.buttonTop:disabled {
+  cursor: auto;
+}
+
+/* Scroll bars */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(220, 219, 219);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(220, 219, 219);
+}

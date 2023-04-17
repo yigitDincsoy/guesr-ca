@@ -8,41 +8,28 @@ function Navigation() {
   const local_set_categoryFilter = localGlobal.set_categoryFilter;
 
   //Set a category selection state-variable in order to save the current state.
-  const [categorySelection, set_categorySelection] = useState("navPopular");
+  const [categorySelection, set_categorySelection] = useState("navTrending");
 
   function scr_selectionMade(arg_selection) {
-    //Update the state-variable according to user selection
-    set_categorySelection(arg_selection);
-    //Reset the previous selection to white
-    document.getElementById(categorySelection).style.color = "white";
-    //Set the new variable to blue
-    if (arg_selection != "navPopular") {
-      document.getElementById(arg_selection).style.color = "yellow";
-    }
+
     switch (arg_selection) {
-      case "navPopular":
-        local_set_categoryFilter("All");
+      case "navTrending":
+        local_set_categoryFilter("all");
         break;
       case "navAll":
-        local_set_categoryFilter("All");
+        local_set_categoryFilter("all");
         break;
       case "navPolitics":
-        local_set_categoryFilter("Politics");
+        local_set_categoryFilter("politics");
         break;
       case "navEconomy":
-        local_set_categoryFilter("Economy");
-        break;
-      case "navSports":
-        local_set_categoryFilter("Sports");
-        break;
-      case "navNews":
-        local_set_categoryFilter("News");
+        local_set_categoryFilter("economy");
         break;
       case "navGossip":
-        local_set_categoryFilter("Gossip");
+        local_set_categoryFilter("gossip");
         break;
       case "navTech":
-        local_set_categoryFilter("Tech");
+        local_set_categoryFilter("tech");
         break;
     }
   }
@@ -50,12 +37,12 @@ function Navigation() {
   return (
     <div className="navbar">
       <Link
-        id="navPopular"
+        id="navTrending"
         className="navlink"
         to="/"
-        onClick={() => scr_selectionMade("navPopular")}
+        onClick={() => scr_selectionMade("navTrending")}
       >
-        Popular
+        trending
       </Link>
       <Link
         id="navPolitics"
@@ -63,7 +50,7 @@ function Navigation() {
         to="/politics"
         onClick={() => scr_selectionMade("navPolitics")}
       >
-        Politics
+        politics
       </Link>
       <Link
         id="navEconomy"
@@ -71,23 +58,7 @@ function Navigation() {
         to="/economy"
         onClick={() => scr_selectionMade("navEconomy")}
       >
-        Economy
-      </Link>
-      <Link
-        id="navSports"
-        className="navlink"
-        to="/sports"
-        onClick={() => scr_selectionMade("navSports")}
-      >
-        Sports
-      </Link>
-      <Link
-        id="navNews"
-        className="navlink"
-        to="/news"
-        onClick={() => scr_selectionMade("navNews")}
-      >
-        News
+        economy
       </Link>
       <Link
         id="navGossip"
@@ -95,7 +66,7 @@ function Navigation() {
         to="/gossip"
         onClick={() => scr_selectionMade("navGossip")}
       >
-        Gossip
+        gossip
       </Link>
       <Link
         id="navTech"
@@ -103,16 +74,9 @@ function Navigation() {
         to="/tech"
         onClick={() => scr_selectionMade("navTech")}
       >
-        Technology
+        tech
       </Link>
-      <Link
-        id="navAll"
-        className="navlink"
-        to="/all"
-        onClick={() => scr_selectionMade("navAll")}
-      >
-        All
-      </Link>
+  
     </div>
   );
 }

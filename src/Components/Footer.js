@@ -1,8 +1,8 @@
-
 function Footer() {
   return (
     <footer>
-        guesr © 2023
+      <div id="Slogan">stealing your time & data for our own profit</div>
+      guesr © 2023
     </footer>
   );
 }
