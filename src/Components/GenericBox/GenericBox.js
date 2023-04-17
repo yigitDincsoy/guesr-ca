@@ -7,6 +7,7 @@ function GenericBox(props) {
 
   function sendRequestToServer() {
     let myBody = "";
+
     if (localGlobal.eventchoosen[1]) {
   
       myBody = JSON.stringify(
@@ -22,8 +23,8 @@ function GenericBox(props) {
        )
     }
 
-
-
+    document.getElementById("GenericBox").style.display = "none" 
+    window.location.reload(true)
 
      console.log(myBody)
 
