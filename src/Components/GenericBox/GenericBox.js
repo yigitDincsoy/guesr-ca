@@ -35,23 +35,23 @@ function GenericBox(props) {
         {localGlobal.eventchoosen[1]?
         <>
         <p>You are saying YES</p>
-        <p>Reward modifier is {sadCalculatePayout()[0].toFixed(2)}</p>
+         <div id="reward">Reward modifier is {sadCalculatePayout()[0].toFixed(2)}</div>
         </>
         : 
         <>
         <p>You are saying NO</p>
-        <p>Reward modifier is {sadCalculatePayout()[1].toFixed(2)}</p>
+        <div id="reward">Reward modifier is {sadCalculatePayout()[1].toFixed(2)}</div>
         </>
         
         }
         
-
-        <p>Please type an amount:</p>
-        <input id="text" type="text" placeholder="enter amount"/>
+        <div className="form">
+        <input id="text" type="text" placeholder="please enter an amount"/>
+        </div>
         <br/>
         <div className="buttonContainer">
-        <button className="letsGo" type="button">Let's Go!</button>
-        <button className="cancel" type="button" onClick={() => {document.getElementById("GenericBox").style.display = "none" }}>Cancel</button>
+        <button className="letsGo" type="button">let's go!</button>
+        <button className="cancel" type="button" onClick={() => {document.getElementById("GenericBox").style.display = "none" }}>cancel</button>
         </div>
         </div>
         </div>

@@ -2,7 +2,7 @@
 .genericBoxWrapper {
     border-width: .25px;
     border-style: solid;
-    border-color: rgb(205, 202, 202);
+    border-color: rgb(161, 160, 160);
     border-radius: 5px;
     box-shadow: 6px 6px 7px rgba(76, 75, 75, 0.288);
     font-family: Poppins;
@@ -18,15 +18,18 @@
 
   .genericBox {
     height: 100%;
-    backdrop-filter: blur(15px);
-    background-color: rgba(255, 255, 255, 0.267);
+    backdrop-filter: blur(17px);
+    background-color: rgba(255, 255, 255, 0.371);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: larger;
+    font-size: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    line-height: 23px;
   }
 
   .buttonContainer{
@@ -54,12 +57,10 @@
   }
   
   input{
-  margin: 4px;
+  margin: 5px;
   border-radius: 4px;
-  border: 1px solid #ccc;
   font-family: inherit;
   }
-  
   
   input::placeholder {
     font-weight: bold;
@@ -68,6 +69,14 @@
     color: #333; 
   }
 
- 
-
+  h4{
+    font-size: 29px;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
   
+#reward{
+    font-size: 26px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
