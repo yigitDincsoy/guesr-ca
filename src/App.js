@@ -36,6 +36,7 @@ function App() {
       })}, [])
 
   return (
+
     <div className="App">
       <BrowserRouter>
         <GlobalContext.Provider
@@ -52,7 +53,7 @@ function App() {
           }}
         >
 
-{(loginInfo.currentUser)
+{loginInfo.currentUser
         ? <HeaderLogged />
         : <Header  /> 
       }
