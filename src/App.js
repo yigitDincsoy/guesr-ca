@@ -23,10 +23,11 @@ function App() {
   const [bottomUIopen, set_bottomUIopen] = useState(false);
   const [loginUIopen, set_loginUIopen] = useState(false);
 
+  const [myUserData, set_myUserData] = useState(null);
+
   const [userLoggedIn, set_userLoggedIn] = useState(false);
   const [eventchoosen, set_eventchoosen] = useState([0,0]);
-
-   const loginInfo = useAuth()
+  const loginInfo = useAuth()
   const [serverData_question, set_serverData_question] = useState(null);
 
   useEffect(() => {
@@ -55,7 +56,8 @@ function App() {
             set_userLoggedIn
           }}
         >
-
+ <AuthProvider>
+         
 
 {userLoggedIn
         ? <HeaderLogged />
@@ -64,7 +66,6 @@ function App() {
 
 
           {<Navigation /> }
-         
          
           {serverData_question
         ?
@@ -82,7 +83,7 @@ function App() {
 
           
           <Footer />
-          <AuthProvider>
+         
             { bottomUIopen ? <SignupBox />: <></>}
             { loginUIopen ? <LoginBox/>: <></>}
           
@@ -93,13 +94,15 @@ function App() {
           
           }
         
-          </AuthProvider>
+          
 
           {serverData_question
         ?
           <GenericBox  questionTitle = "EXAMPLE QUESTION" userAnswer = "EXAMPLE ANSWER" rewardModifier = "EXAMPLE REWARD" userMoney = "YOUR MONEY" /> 
           : <></> }
 
+      
+</AuthProvider>
         </GlobalContext.Provider>
        
             

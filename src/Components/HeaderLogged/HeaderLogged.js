@@ -37,7 +37,7 @@ function HeaderLogged() {
         <button className="buttonTop minibutton" >📖</button>
         </Link>
 
-        <button className="buttonTop" onClick={() => localGlobal.set_userLoggedIn(false)}>Logout</button> 
+        <button className="buttonTop" onClick={() => {localGlobal.set_userLoggedIn(null); loginInfo.signout(); }}>Logout</button> 
       </div>
     </header>
   );
