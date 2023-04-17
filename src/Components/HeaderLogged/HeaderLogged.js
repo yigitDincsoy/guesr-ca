@@ -18,13 +18,13 @@ function HeaderLogged() {
       document.getElementById("guessButton").style.borderWidth = "0 0 4px";
     }
 
-    console.log(localGlobal.bottomUIopen);
+
   }
 
   return (
     <header>
       <div className="header_left">
-      <h4>{loginInfo.currentUser}</h4>
+      <h4>{localGlobal.userLoggedIn}</h4>
       <h4>500 💵</h4>
       </div>
       <div className="header_mid">
@@ -32,12 +32,12 @@ function HeaderLogged() {
       </div>
 
       <div className="header_right">
-        
+    
       <Link to="/guessHistory">
         <button className="buttonTop minibutton" >📖</button>
         </Link>
 
-        <button className="buttonTop" onClick={() => loginInfo.signout()}>Logout</button> 
+        <button className="buttonTop" onClick={() => localGlobal.set_userLoggedIn(false)}>Logout</button> 
       </div>
     </header>
   );
