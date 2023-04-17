@@ -11,7 +11,6 @@ function GenericBox(props) {
   const localGlobal = useContext(GlobalContext);
 
   const eventChoosenData = localGlobal.serverData_question.data[localGlobal.eventchoosen[0]];
-  console.log(eventChoosenData);
 
 
   function sadCalculatePayout() {

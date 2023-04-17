@@ -6,7 +6,7 @@ import Infobox from "./Infobox/Infobox";
 function Main() {
   const localGlobal = useContext(GlobalContext);
   const localServerData = localGlobal.serverData_question.data;
-  console.log("hey")
+
 
   //Filter the data according to the user selection and create a new, smaller question array to be used for rendering
   let categoryFilter = localGlobal.categoryFilter;

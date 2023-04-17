@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { GlobalContext } from "../../App";
 import { useAuth } from "../Auth/AuthProvider";
 import { useRef } from "react";
 
@@ -6,14 +7,18 @@ import "./SignupBox.css";
 
 function BottomDynamic(props)
 {
+  const localGlobal = useContext(GlobalContext);
   const authContext = useAuth();
   const userRef = useRef();
   const pwdRef = useRef();
   
   function onAttemptSignup(e)
   {
+
       e.preventDefault();
       authContext.signup(userRef.current.value,pwdRef.current.value)
+      localGlobal.set_bottomUIopen(false); 
+      localGlobal.set_userLoggedIn(false); 
       //wait until we get a response
       //check if signup worked
       //if it did, then we create a user on mongo db
@@ -24,6 +29,7 @@ function BottomDynamic(props)
 
 
   return (
+    
     <div className="BI_Wrapper">
       <div className="BI_Content">
         <div className="container">
