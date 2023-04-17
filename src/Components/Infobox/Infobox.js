@@ -10,7 +10,7 @@ function activateGenericArea() {
 
 //Styled Components
 const InfoboxTitle = styled.h1`
-  font-size: 18px;
+  font-size: 16px;
   font-family: poppins;
   text-align: center;
   position: relative;
@@ -20,6 +20,8 @@ const InfoboxTitle = styled.h1`
   justify-content: center;
   line-height: 20px;
   letter-spacing: 0.25px;
+  padding-left: 5px;
+  padding-right: 5px;
 `;
 
 const InfoboxImage = styled.img`
