@@ -111,6 +111,7 @@ function Infobox(props) {
   const date = new Date(boxData["closeDate"]);
   const options = { year: 'numeric', month: 'long', day: 'numeric' };
   const readableDate = date.toLocaleDateString("en-US", options);
+  
   function calculatePayout() {
     let totalVotes = 0;
     const payout = []
@@ -124,7 +125,7 @@ function Infobox(props) {
   }
 
   return (
-    <InfoboxWrapper className={boxData["category"]} onClick={() => { localGlobal.set_eventchoosen(props.localID); activateGenericArea() }}>
+    <InfoboxWrapper className={boxData["category"]} >
       <InfoboxImage src={"stockphotos/" + boxData["photo"]} />
       <div className="imageText">{boxData["category"]}</div>
       <p id="boxTimer" className="timerArea">
@@ -141,10 +142,11 @@ function Infobox(props) {
       </div>
       <InfoboxTitle>{boxData["title"]}</InfoboxTitle>
       <InfoboxButtonArea>
-        <InfoboxButton onClick={() => boxSelected()}>
+        <InfoboxButton onClick={() => { localGlobal.set_eventchoosen([props.localID, 1]); activateGenericArea() }}>
           yes ({payout[0].toFixed(2)})
         </InfoboxButton>
-        <InfoboxButton>no ({payout[1].toFixed(2)})</InfoboxButton>
+        <InfoboxButton onClick={() => { localGlobal.set_eventchoosen([props.localID, 0]); activateGenericArea() }}>
+          no ({payout[1].toFixed(2)})</InfoboxButton>
       </InfoboxButtonArea>
     </InfoboxWrapper>
   );

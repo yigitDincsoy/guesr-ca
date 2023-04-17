@@ -2,18 +2,52 @@ import React, { useEffect, useContext } from "react";
 import { GlobalContext } from "../../App";
 import "./GenericBox.css";
 
-function GenericBox(props) {
 
-  
+
+
+
+
+function GenericBox(props) {
+  const localGlobal = useContext(GlobalContext);
+
+  const eventChoosenData = localGlobal.serverData_question.data[localGlobal.eventchoosen[0]];
+  console.log(eventChoosenData);
+
+
+  function sadCalculatePayout() {
+    let totalVotes = 0;
+    const payout = []
+    for (let votes of eventChoosenData["votes"]) {
+      totalVotes += votes
+    }
+    for (let votes of eventChoosenData["votes"]) {
+      payout.push(totalVotes / votes)
+    }
+    return payout
+  }
+
   return (
     <div className="genericBoxWrapper" id="GenericBox">
         <div className="genericBox">
         <h4>🍀 Please Confirm! 🍀</h4>
 
-        <p>Q: {props.questionTitle}</p>
-        <p>You are saying {props.userAnswer}</p>
-        <p>Reward modifier is {props.rewardModifier}</p>
-        <p>Please type an amount: (Max. {props.userMoney})</p>
+        <p>Q: {eventChoosenData.title}</p>
+
+        {localGlobal.eventchoosen[1]?
+        <>
+        <p>You are saying YES</p>
+        <p>Reward modifier is {sadCalculatePayout()[0].toFixed(2)}</p>
+        </>
+        : 
+        <>
+        <p>You are saying NO</p>
+        <p>Reward modifier is {sadCalculatePayout()[1].toFixed(2)}</p>
+        </>
+        
+        }
+        
+
+        <p>Please type an amount:</p>
         <input id="text" type="text" placeholder="enter amount"/>
         <br/>
         <div className="buttonContainer">

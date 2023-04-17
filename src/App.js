@@ -23,10 +23,9 @@ function App() {
   const [bottomUIopen, set_bottomUIopen] = useState(false);
   const [loginUIopen, set_loginUIopen] = useState(false);
 
-  const [eventchoosen, set_eventchoosen] = useState(0);
+  const [eventchoosen, set_eventchoosen] = useState([0,0]);
   
   const loginInfo = useAuth()
-  console.log(loginInfo.currentUser)
   const [serverData_question, set_serverData_question] = useState(null);
 
   useEffect(() => {
@@ -85,9 +84,13 @@ function App() {
         
           </AuthProvider>
 
+          {serverData_question
+        ?
+          <GenericBox  questionTitle = "EXAMPLE QUESTION" userAnswer = "EXAMPLE ANSWER" rewardModifier = "EXAMPLE REWARD" userMoney = "YOUR MONEY" /> 
+          : <></> }
 
         </GlobalContext.Provider>
-        {<GenericBox  questionTitle = "EXAMPLE QUESTION" userAnswer = "EXAMPLE ANSWER" rewardModifier = "EXAMPLE REWARD" userMoney = "YOUR MONEY" /> }
+       
       </BrowserRouter>
     </div>
   );
