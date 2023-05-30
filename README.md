@@ -1,4 +1,4 @@
-# Guesr Ca
+# guesr.ca
 
 Guesr.ca is an online game built MongoDB, Express, React and Node.Js.
 Players are rewarded for correctly guessing upcoming events.
